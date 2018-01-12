@@ -1,8 +1,8 @@
 $default: #ffffff; // default colors for layout
 $body-bg: #F0F3F4; // default bg color
 
-$default-text: $default; // default text color layout (usually is the same as $default)
-$content-text: $default-text; // content text color on card, panels, form, etc
+$default-text: black; //$default; // default text color layout (usually is the same as $default)
+$content-text: black; //$default-text; // content text color on card, panels, form, etc
 $help-text: $default-text; // additional text color for hits
 
 $label-text: $default-text; // labels color
@@ -15,7 +15,7 @@ $input-background: rgba(255, 255, 255, 0.1); // input border color for hover
 $dropdown-text: #7d7d7d; // dropdown text color
 
 // sidebar colors
-$sidebar: #282828;
+$sidebar: #495f68; //#282828;
 $sidebar-text: #ffffff;
 
 // specific components colors
@@ -27,7 +27,7 @@ $progress-default: rgba($default-text, 0.95);
 // bootstrap card panel styles
 $bootstrap-panel-radius: 7px;
 $bootstrap-panel-text: #ffffff;
-$bootstrap-panel-bg: rgba(255, 255, 255, 0.1);
+$bootstrap-panel-bg: rgba(188, 188, 188, 0.7); //rgba(255, 255, 255, 0.1);
 $bootstrap-panel-header-bg: transparent;
 $bootstrap-panel-header-border: 1px solid $border-light;
 $bootstrap-panel-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
@@ -65,7 +65,7 @@ $hoverlink: darken($activelink, 20%);
 @mixin body-bg() {
   background-color: $body-bg;
 
-  $mainBgUrl: $assets-root + $images-root + 'sky-bg.jpg';
+  $mainBgUrl: $assets-root + $images-root;// + 'sky-bg.jpg';
 
   &::before {
     content: '';
