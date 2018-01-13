@@ -13,9 +13,9 @@
     min-width: $resMin;
     padding: 0 32px 0 40px;
 
-    .dropdown-toggle::after {
+    /*.dropdown-toggle::after {
       display: none;
-    }
+    }*/
   }
 
   .blur {
@@ -33,6 +33,7 @@
     float: left;
     outline: none !important;
     line-height: 60px;
+    padding-left: 30px;
 
     span {
       color: $primary;
@@ -106,7 +107,7 @@
     color: $sidebar-text;
     padding: 0;
     float: left;
-    margin: 11px 0 0 25px;
+    margin: 11px 0 1px 0; //11px 0 0 25px;
 
     &:hover {
       text-decoration: none;
@@ -158,8 +159,11 @@
     }
     input {
       color: $sidebar-text;
+      //background-color: $primary;
+      border-radius: 4px;
       background: none;
-      border: none;
+      border-color: white;
+      //border: none;
       outline: none;
       width: 120px;
       padding: 0;
