@@ -14,7 +14,7 @@ export const PAGES_MENU = [
           }
         }
       },
-      {
+      /*{
         path: 'editors',
         data: {
           menu: {
@@ -35,8 +35,8 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
-      {
+      },*/
+      /*{
         path: 'components',
         data: {
           menu: {
@@ -57,7 +57,7 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
+      },*/
       {
         path: 'charts',
         data: {
@@ -218,7 +218,7 @@ export const PAGES_MENU = [
            }
         ]
       },
-      {
+      /*{
         path: 'maps',
         data: {
           menu: {
@@ -263,7 +263,7 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
+      },*/
       {
         path: '',
         data: {
@@ -294,7 +294,7 @@ export const PAGES_MENU = [
           }
         ]
       },
-      {
+      /*{
         path: '',
         data: {
           menu: {
@@ -336,8 +336,8 @@ export const PAGES_MENU = [
             ]
           }
         ]
-      },
-      {
+      },*/
+      /*{
         path: '',
         data: {
           menu: {
@@ -348,7 +348,7 @@ export const PAGES_MENU = [
             target: '_blank'
           }
         }
-      }
+      }*/
     ]
   }
 ];
