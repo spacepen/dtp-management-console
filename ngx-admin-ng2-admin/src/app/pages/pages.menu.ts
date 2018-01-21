@@ -3,11 +3,37 @@ export const PAGES_MENU = [
     path: 'pages',
     children: [
       {
+        path: 'home',  // path for our page
+        data: { // custom menu declaration
+          menu: {
+            title: 'Home', // menu title
+            icon: 'ion-android-home', // menu icon
+            pathMatch: 'prefix', // use it if item children not displayed in menu
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        }
+      },
+      {
         path: 'dashboard',
         data: {
           menu: {
             title: 'general.menu.dashboard',
-            icon: 'ion-android-home',
+            icon: 'ion-stats-bar',
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        }
+      },
+      {
+        path: 'admin',  // path for our page
+        data: { // custom menu declaration
+          menu: {
+            title: 'Admin Editor', // menu title
+            icon: 'ion-edit', // icon
+            pathMatch: 'prefix', // use it if item children not displayed in menu
             selected: false,
             expanded: false,
             order: 0
@@ -63,7 +89,7 @@ export const PAGES_MENU = [
         data: {
           menu: {
             title: 'general.menu.charts',
-            icon: 'ion-stats-bars',
+            icon: 'ion-gear-a',
             selected: false,
             expanded: false,
             order: 200,
@@ -80,7 +106,7 @@ export const PAGES_MENU = [
           }
         ]
       },
-      {
+      /*{
         path: 'ui',
         data: {
           menu: {
@@ -141,8 +167,8 @@ export const PAGES_MENU = [
             }
           },
         ]
-      },
-      {
+      },*/
+      /*{
         path: 'forms',
         data: {
           menu: {
@@ -171,8 +197,8 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
-      {
+      },*/
+      /*{
         path: 'tables',
         data: {
           menu: {
@@ -217,7 +243,7 @@ export const PAGES_MENU = [
              }
            }
         ]
-      },
+      },*/
       /*{
         path: 'maps',
         data: {

@@ -1,1 +1,1 @@
-export * from './editors.component';
+//export * from './editors.component';
