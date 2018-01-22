@@ -19,7 +19,7 @@ export const PAGES_MENU = [
         path: 'dashboard',
         data: {
           menu: {
-            title: 'general.menu.dashboard',
+            title: 'Dashboard',
             icon: 'ion-stats-bar',
             selected: false,
             expanded: false,
