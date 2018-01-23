@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
 import {EmailValidator, EqualPasswordsValidator} from '../../theme/validators';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'register',
@@ -18,7 +19,7 @@ export class Register {
 
   public submitted:boolean = false;
 
-  constructor(fb:FormBuilder) {
+  constructor(fb:FormBuilder, private router:Router) {
 
     this.form = fb.group({
       'name': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
@@ -41,6 +42,7 @@ export class Register {
     if (this.form.valid) {
       // your code goes here
       // console.log(values);
+      this.router.navigate(['pages']);
     }
   }
 }

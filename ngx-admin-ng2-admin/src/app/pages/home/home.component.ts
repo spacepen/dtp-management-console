@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'home',
-  templateUrl: './home.html'
-  //template: `<strong>My page content here</strong>`,
+  templateUrl: './home.html',
+  styleUrls: ['./home.scss']
 })
 export class HomeComponent {
   constructor() {}

@@ -20,7 +20,7 @@ export const PAGES_MENU = [
         data: {
           menu: {
             title: 'Dashboard',
-            icon: 'ion-stats-bar',
+            icon: 'ion-stats-bars',
             selected: false,
             expanded: false,
             order: 0
@@ -32,7 +32,7 @@ export const PAGES_MENU = [
         data: { // custom menu declaration
           menu: {
             title: 'Admin Editor', // menu title
-            icon: 'ion-edit', // icon
+            icon: 'ion-person-stalker', // icon
             pathMatch: 'prefix', // use it if item children not displayed in menu
             selected: false,
             expanded: false,
@@ -290,7 +290,7 @@ export const PAGES_MENU = [
           }
         ]
       },*/
-      {
+      /*{
         path: '',
         data: {
           menu: {
@@ -319,7 +319,7 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
+      },*/
       /*{
         path: '',
         data: {

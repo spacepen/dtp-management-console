@@ -50,7 +50,7 @@
     margin-top: 10px;
   }
 
-  .al-user-profile {
+/*  .al-user-profile {
     float: right;
     margin-right: 12px;
     transition: all .15s ease-in-out;
@@ -82,7 +82,7 @@
       height: 45px;
       border-radius: 50%;
     }
-  }
+  }*/
 
   a.refresh-data {
     color: $sidebar-text;
@@ -111,7 +111,7 @@
 
     &:hover {
       text-decoration: none;
-      color: $warning;
+      color: $primary;
     }
   }
 
@@ -202,5 +202,38 @@
 
   .profile-toggle-link {
     cursor: pointer;
+    font-size: 31px;
+    float: right;
+    text-decoration: none;
+    line-height: 42px;
+    margin: 0px 12px 0px 0px;
+    transition: all .15s ease-in-out;
+    padding: 0;
+    border: 0;
+    opacity: 1;
+    position: relative;
+    ul.profile-dropdown:after {
+      bottom: 100%;
+      right: 0;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: #fff;
+      border-width: 10px;
+      margin-right: 28px;
+      &:hover{
+        color: $primary;
+      }
+    }
+    a {
+      display: block;
+      &:hover {
+        color: $primary;
+      }
+    }
   }
 }
