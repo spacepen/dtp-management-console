@@ -16,7 +16,7 @@ export const PAGES_MENU = [
         }
       },
       {
-        path: 'dashboard',
+        path: '',
         data: {
           menu: {
             title: 'Dashboard',
@@ -25,7 +25,25 @@ export const PAGES_MENU = [
             expanded: false,
             order: 0
           }
-        }
+        },
+        children: [
+          {
+            path: 'status',
+            data: {
+              menu: {
+                title: 'Status',
+              }
+            }
+          },
+          {
+            path: 'activities',
+            data: {
+              menu: {
+                title: 'Activities',
+              }
+            }
+          }
+        ]
       },
       {
         path: 'admin',  // path for our page
@@ -33,6 +51,19 @@ export const PAGES_MENU = [
           menu: {
             title: 'Admin Editor', // menu title
             icon: 'ion-person-stalker', // icon
+            pathMatch: 'prefix', // use it if item children not displayed in menu
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        }
+      },
+      {
+        path: 'dashboard',  // path for our page
+        data: { // custom menu declaration
+          menu: {
+            title: 'Dashboard-alt', // menu title
+            icon: '', // menu icon
             pathMatch: 'prefix', // use it if item children not displayed in menu
             selected: false,
             expanded: false,

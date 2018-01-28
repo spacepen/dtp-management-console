@@ -22,12 +22,9 @@ export const routes: Routes = [
       { path: 'home',  loadChildren: './home/home.module#HomeModule' },
       { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
       { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
-      //{ path: 'editors', loadChildren: './editors/editors.module#EditorsModule' },
-      //{ path: 'components', loadChildren: './components/components.module#ComponentsModule' },
+      { path: 'status', loadChildren: './status/status.module#StatusModule'},
+      { path: 'activities', loadChildren: './activities/activities.module#ActivitiesModule'},
       { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
-      //{ path: 'ui', loadChildren: './ui/ui.module#UiModule' },
-      //{ path: 'forms', loadChildren: './forms/forms.module#FormsModule' },
-      //{ path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
     ]
   }
 ];
