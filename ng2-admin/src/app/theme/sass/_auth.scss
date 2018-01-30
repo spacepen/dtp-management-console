@@ -125,4 +125,7 @@ a.forgot-pass {
 
 .btn-auth {
   color: #ffffff!important;
+  &:hover{
+    background-color: $primary!important;
+  }
 }

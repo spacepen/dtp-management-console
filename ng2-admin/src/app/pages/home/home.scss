@@ -1,3 +1,20 @@
 .home-content{
-  color: #00abff;
+  color: black;
 }
+
+.home_div{
+  text-align: center;
+  background-color: rgba(150, 150, 150, 0.5);
+  border-radius: 5px;
+  border-color: rgb(100, 100, 100);
+  box-shadow: 5px 5px 3px rgba(150, 150, 150, 0.2);
+}
+
+.home_title{
+  font-size: 1.4em;
+  .letter{
+    color: #00abff;
+  }
+}
+
+
