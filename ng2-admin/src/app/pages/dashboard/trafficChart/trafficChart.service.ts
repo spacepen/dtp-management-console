@@ -12,18 +12,18 @@ export class TrafficChartService {
     let dashboardColors = this._baConfig.get().colors.dashboard;
     return [
       {
-        value: 2000,
+        value: 1800,
         color: dashboardColors.white,
         highlight: colorHelper.shade(dashboardColors.white, 15),
         label: 'Other',
-        percentage: 87,
+        percentage: 85,
         order: 1,
       }, {
-        value: 1500,
+        value: 1600,
         color: dashboardColors.gossip,
         highlight: colorHelper.shade(dashboardColors.gossip, 15),
         label: 'Search engines',
-        percentage: 22,
+        percentage: 24,
         order: 4,
       }, {
         value: 1000,

@@ -7,7 +7,7 @@ import { StatusComponent } from './status.component';
 
 const routes: Routes = [
   {
-    path: 'status',
+    path: '',
     component: StatusComponent
   }
 ];

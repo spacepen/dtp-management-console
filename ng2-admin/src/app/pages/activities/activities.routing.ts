@@ -7,7 +7,7 @@ import { ActivitiesComponent } from './activities.component';
 
 const routes: Routes = [
   {
-    path: 'activities',
+    path: '',
     component: ActivitiesComponent
   }
 ];

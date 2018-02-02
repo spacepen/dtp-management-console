@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'activities',
-  template: './activities.html',
+  templateUrl: './activities.html',
+  styleUrls: ['./activities.scss']
 })
 export class ActivitiesComponent {
   constructor() {}

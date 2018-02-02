@@ -1,13 +1,17 @@
 import {Component} from '@angular/core';
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {LoginService} from './login.service';
+
 
 @Component({
   selector: 'login',
   templateUrl: './login.html',
-  styleUrls: ['./login.scss']
+  styleUrls: ['./login.scss'],
+
 })
 export class Login {
+
 
   public form:FormGroup;
   //public email:AbstractControl;
