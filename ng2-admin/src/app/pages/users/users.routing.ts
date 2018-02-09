@@ -1,13 +1,15 @@
 /**
- * Created by tomda on 28.01.2018.
+ * Created by tinoglatzel on 09.02.18.
  */
+
+
 import { Routes, RouterModule } from '@angular/router';
-import { ActivitiesComponent } from './activities.component';
+import { UsersComponent } from './users.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ActivitiesComponent
+    component: UsersComponent
   }
 ];
 

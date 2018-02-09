@@ -1,7 +1,8 @@
-import { Routes, RouterModule } from '@angular/router';
 
+
+import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
-import {ModuleWithProviders} from "@angular/core";
+import { ModuleWithProviders } from "@angular/core";
 
 const routes: Routes = [
   {

@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'admin',
-  templateUrl: './admin.html',
-  styleUrls: ['./admin.scss'],
+  template: `<strong></strong>`,
 })
 export class AdminComponent {
   constructor() {}

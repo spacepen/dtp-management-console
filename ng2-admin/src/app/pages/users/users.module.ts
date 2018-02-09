@@ -1,13 +1,13 @@
 /**
- * Created by tomda on 28.01.2018.
+ * Created by tinoglatzel on 09.02.18.
  */
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { ActivitiesComponent } from './activities.component';
-import { routing } from './activities.routing';
+import { UsersComponent } from './users.component';
+import { routing } from './users.routing';
 
 @NgModule({
   imports: [
@@ -16,7 +16,7 @@ import { routing } from './activities.routing';
     routing
   ],
   declarations: [
-    ActivitiesComponent
+    UsersComponent
   ]
 })
-export class ActivitiesModule {}
+export class UsersModule {}

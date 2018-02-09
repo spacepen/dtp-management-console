@@ -25,6 +25,7 @@ export const routes: Routes = [
       { path: 'status', loadChildren: './status/status.module#StatusModule'},
       { path: 'activities', loadChildren: './activities/activities.module#ActivitiesModule'},
       { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
+      { path: 'users', loadChildren: './users/users.module#UsersModule'}
     ]
   }
 ];
