@@ -19,7 +19,7 @@ export const PAGES_MENU = [
         path: '',
         data: {
           menu: {
-            title: 'Dashboard',
+            title: 'Nodewatch',
             icon: 'ion-stats-bars',
             selected: false,
             expanded: false,
@@ -49,7 +49,7 @@ export const PAGES_MENU = [
         path: 'admin',  // path for our page
         data: { // custom menu declaration
           menu: {
-            title: 'Admin Editor', // menu title
+            title: 'Admin Area', // menu title
             icon: 'ion-person-stalker', // icon
             pathMatch: 'prefix', // use it if item children not displayed in menu
             selected: false,

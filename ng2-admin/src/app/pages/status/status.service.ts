@@ -13,7 +13,7 @@ export class StatusService{
     var json = JSON.stringify({var1: 'test', var2: 3});
     var params = 'json= ' + json;
 
-    return this._http.post('http://validate.jsontest.com/?json=[JSON-code-to-validate]', params, {}).map(res => res.json());
+    return this._http.post('', params, {}).map(res => res.json());
   }
 
   getTest(){
