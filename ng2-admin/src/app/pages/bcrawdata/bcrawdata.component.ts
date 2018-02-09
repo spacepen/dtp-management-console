@@ -2,18 +2,19 @@
  * Created by tinoglatzel on 09.02.18.
  */
 
-
 import { Component } from '@angular/core';
 import { ActivitiesService } from "../activities/activities.service";
 
 @Component({
-  selector: 'users',
-  templateUrl: './users.html',
-  styleUrls: ['./users.scss'],
+  selector: 'bcrawdata',
+  templateUrl: './bcrawdata.html',
+  styleUrls: ['./bcrawdata.scss'],
   providers: [ ActivitiesService ]
+
 })
 
-export class UsersComponent {
+export class BcRawDataComponent {
+
   constructor(
     private _httpService:ActivitiesService
   ) {}

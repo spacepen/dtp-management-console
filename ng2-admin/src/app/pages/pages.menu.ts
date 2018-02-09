@@ -64,6 +64,22 @@ export const PAGES_MENU = [
                 title: 'Users',
               }
             }
+          },
+          {
+            path: 'layerconfigs',
+            data: {
+              menu: {
+                title: 'Layer Configurations',
+              }
+            }
+          },
+          {
+            path: 'bcrawdata',
+            data: {
+              menu: {
+                title: 'Blockchain Data',
+              }
+            }
           }
         ]
       },

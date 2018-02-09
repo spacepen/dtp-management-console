@@ -3,12 +3,12 @@
  */
 
 import { Routes, RouterModule } from '@angular/router';
-import { UsersComponent } from './users.component';
+import { LayerConfigsComponent } from './layerconfigs.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: UsersComponent
+    component: LayerConfigsComponent
   }
 ];
 

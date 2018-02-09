@@ -3,12 +3,12 @@
  */
 
 import { Routes, RouterModule } from '@angular/router';
-import { UsersComponent } from './users.component';
+import { BcRawDataComponent } from "./bcrawdata.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: UsersComponent
+    component: BcRawDataComponent
   }
 ];
 
