@@ -19,7 +19,7 @@ export const PAGES_MENU = [
         path: '',
         data: {
           menu: {
-            title: 'Nodewatch',
+            title: 'Dashboard',
             icon: 'ion-stats-bars',
             selected: false,
             expanded: false,
