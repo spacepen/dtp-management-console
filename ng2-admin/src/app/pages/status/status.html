@@ -1,9 +1,15 @@
 
-<div class="row status-content">
-  <div class="col-sm-10">
-    <button (click)="onTestPost()" >Test POST Request</button>
-  </div>
-  <p>Output: {{postData}}</p>
-</div>
-
 <div class="status-content">Hallo!!!</div>
+
+<br><br>
+
+<button class="status-content" (click)="onTestPost()">Test POST Request</button>
+<br>
+<p class="status-content">Outlet: {{postData}}</p><br>
+<button class="status-content"(click)="onTestGet()">Test GET Request new</button>
+<<br>
+<p class="status-content">Outlet: {{getData}}</p>
+<button class="status-content"(click)="onTestGet1()">Test GET Request old</button>
+<<br>
+<p class="status-content">Outlet: {{getData1}}</p>
+
