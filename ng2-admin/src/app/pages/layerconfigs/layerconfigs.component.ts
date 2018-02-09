@@ -3,20 +3,20 @@
  */
 
 import { Component } from '@angular/core';
-import { ActivitiesService } from "../activities/activities.service";
+import { LayerConfigsService } from "./layerconfigs.service";
 
 @Component({
   selector: 'layerconfigs',
   templateUrl: './layerconfigs.html',
   styleUrls: ['./layerconfigs.scss'],
-  providers: [ ActivitiesService ]
+  providers: [ LayerConfigsService ]
 
 })
 
 export class LayerConfigsComponent {
 
   constructor(
-    private _httpService:ActivitiesService
+    private _httpService:LayerConfigsService
   ) {}
 
   getData: string;

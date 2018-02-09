@@ -17,7 +17,7 @@ export class StatusService{
   }
 
   getTest(){
-    return this._http.get('http://10.0.0.8:8080/dtp/mc/nodewatch/metadata').map(res => res.json());  // For now every different user has to change the ip to his own, so not dynamically :/
+    return this._http.get('http://localhost:8080/dtp/mc/nodewatch/metadata').map(res => res.json());  // For now every different user has to change the ip to his own, so not dynamically :/
     // IMPORTANT NOTICE:  As it is normally not allowed to call a REST API within the same "localhost" (due to security reasons of a browser),
     // (needed)           it is needed to install an AddOn in the browser (e.g. CORS in Chrome) to allow cross-origin ressource sharing.
     //                    In our case to allow one port (8080) of localhost to communicate with the other port (in our case the development server on port 4200);
@@ -26,6 +26,6 @@ export class StatusService{
   }
 
   getTest1(){
-    return this._http.get('http://10.0.0.8:8080/dtp/mc/nodewatch/metadata');
+    return this._http.get('http://localhost:8080/dtp/mc/nodewatch/metadata');
   }
 }

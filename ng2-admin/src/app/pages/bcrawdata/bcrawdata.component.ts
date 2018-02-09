@@ -3,20 +3,20 @@
  */
 
 import { Component } from '@angular/core';
-import { ActivitiesService } from "../activities/activities.service";
+import { BcRawDataService } from "./bcrawdata.service";
 
 @Component({
   selector: 'bcrawdata',
   templateUrl: './bcrawdata.html',
   styleUrls: ['./bcrawdata.scss'],
-  providers: [ ActivitiesService ]
+  providers: [ BcRawDataService ]
 
 })
 
 export class BcRawDataComponent {
 
   constructor(
-    private _httpService:ActivitiesService
+    private _httpService:BcRawDataService
   ) {}
 
   getData: string;

@@ -20,6 +20,6 @@ export class ActivitiesService{
 
   getTest(){
 
-    return this._http.get('http://10.0.0.8:8080/dtp/mc/nodewatch/stats?newPoolTransactionCount=0').map(res => res.json());
+    return this._http.get('http://localhost:8080/dtp/mc/nodewatch/stats').map(res => res.json());
   }
 }

@@ -4,18 +4,18 @@
 
 
 import { Component } from '@angular/core';
-import { ActivitiesService } from "../activities/activities.service";
+import { UsersService } from "./users.service";
 
 @Component({
   selector: 'users',
   templateUrl: './users.html',
   styleUrls: ['./users.scss'],
-  providers: [ ActivitiesService ]
+  providers: [ UsersService ]
 })
 
 export class UsersComponent {
   constructor(
-    private _httpService:ActivitiesService
+    private _httpService:UsersService
   ) {}
 
   getData: string;
