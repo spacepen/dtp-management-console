@@ -16,8 +16,10 @@ export class StatusComponent {
   postData: string;
   getData: string;
   getData1: string;
-  metadata: any;
+  nodeMetadataList: any;
   nodeMetaArray = [];
+  nodeTimestamp: any;
+  date: any;
 
  constructor(private _httpService:StatusService){}
 
@@ -33,18 +35,12 @@ export class StatusComponent {
     this._httpService.getTest()
       .subscribe(
         data => {
-          this.metadata = data.nodeMetadata.layerNames;
-          var length = data.nodeMetadata.layerNames["length"];
+          this.nodeMetadataList = data.nodeMetadata.layerNames;
+          /*var length = data.nodeMetadata.layerNames["length"];
           for (var i = 0; i < length; i++){
-            this.nodeMetaArray[i] = data.nodeMetadata.layerNames[i];
+            this.nodeMetaArray[i] = data.nodeMetadataList.layerNames[i];
           }
-          console.log(length);
-          /*var length = data.nodeMetadata["length"];
-          for (var i = 0; i < length; i++){
-            this.nodeMetaArray[i] = data.nodeMetadata[i];
-          }
-          console.log(this.nodeMetaArray);*/
-          //this.metadata.nodeMetadata;
+          console.log(length);*/
         },
         error => alert(error),
         () => console.log("Finished")
@@ -54,9 +50,19 @@ export class StatusComponent {
   onTestGet1(){
     this._httpService.getTest1()
       .subscribe(
-        data => this.getData1 = JSON.stringify(data),
-        error => alert(error),
-        () => console.log("Finished")
+        data => {
+          this.nodeTimestamp = data.nodeMetadata.bootstrapTimestamp;
+          var d = new Date(this.nodeTimestamp);
+          var formattedDate = d.getDate() + "-" + (d.getMonth()+1)+ "-" +  d.getFullYear();
+          var hours = (d.getHours()<10) ? "0" + d.getHours() : d.getHours();
+          //var minutes = (d.getMinutes()<10) ? "0" + d.getMinutes() : d.getMinutes;
+          var formattedTime = hours + "h";
+          formattedDate = formattedDate + " " + formattedTime;
+          this.date = formattedDate;
+          console.log(formattedDate);
+        },
+            error => alert(error),
+            () => console.log("Finished")
       );
   }
 }

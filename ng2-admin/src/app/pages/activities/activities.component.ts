@@ -16,15 +16,15 @@ import { ActivitiesService } from './activities.service'
 export class ActivitiesComponent {
   constructor(private _httpService:ActivitiesService){}
 
-  getData: any;
+  stats: any;
 
 
   onTestGet() {
     this._httpService.getTest()
       .subscribe(
-        data => {this.getData = data},
+        data => this.stats = data.newPoolTransactionCount,
         error => alert(error),
-        () => console.log("Finished"+this.getData)
+        () => console.log("Finished, data: "+this.stats)
       );
   }
 
