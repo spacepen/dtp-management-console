@@ -16,14 +16,17 @@ import { ActivitiesService } from './activities.service'
 export class ActivitiesComponent {
   constructor(private _httpService:ActivitiesService){}
 
-  getData: string;
+  getData: any;
 
-  onTestGet(){
+
+  onTestGet() {
     this._httpService.getTest()
       .subscribe(
-        data => this.getData = JSON.stringify(data),
+        data => {this.getData = data},
         error => alert(error),
-        () => console.log("Finished")
+        () => console.log("Finished"+this.getData)
       );
   }
+
+
 }

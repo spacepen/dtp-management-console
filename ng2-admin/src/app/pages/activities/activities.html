@@ -2,5 +2,24 @@
 
 <br><br>
 
-<button class="status-content"(click)="onTestGet()">Test Filtered GET Request</button><<br>
-<p class="activities-content">Outlet: {{getData}}</p>
+<button class="activities-content" (click)="onTestGet()">Test GET Request</button>
+<!--<p class="activities-content">Outlet: {{getData}}</p>-->
+<br><br>
+
+<p class="activities-content">newPoolTransactionCount: {{getData.newPoolTransactionCount}}</p>
+<p class="activities-content">newQueueBlockCount: {{getData.newQueueBlockCount}}</p>
+<p class="activities-content">getData.newChainBlockCount: {{getData.newChainBlockCount}}</p>
+<p class="activities-content">newIbdBlockCount: {{getData.newIbdBlockCount}}</p>
+<p class="activities-content">newVoteCount: {{getData.newVoteCount}}</p>
+<p class="activities-content">removedPoolTransactionCount: {{getData.removedPoolTransactionCount}}</p>
+<p class="activities-content">removedQueueBlockCount: {{getData.removedQueueBlockCount}}</p>
+<p class="activities-content" *ngFor="let item of getData.newPoolTransactions">newPoolTransactions: {{item}}</p>
+
+<p class="activities-content">newQueueBlocks: {{getData.newQueueBlocks.innerItem}}</p>
+<p class="activities-content">newChainBlocks: {{getData.newChainBlocks.innerItem}}</p>
+<p class="activities-content">newIbdBlocks: {{getData.newIbdBlocks.innerItem}}</p>
+<p class="activities-content">newVotes: {{getData.newVotes.innerItem}}</p>
+<p class="activities-content">removedPoolTransactions: {{getData.removedPoolTransactions.innerItem}}</p>
+<p class="activities-content">removedQueueBlocks: {{getData.removedQueueBlocks.innerItem}}</p>
+
+

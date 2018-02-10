@@ -16,6 +16,8 @@ export class StatusComponent {
   postData: string;
   getData: string;
   getData1: string;
+  metadata: any;
+  nodeMetaArray = [];
 
  constructor(private _httpService:StatusService){}
 
@@ -30,7 +32,20 @@ export class StatusComponent {
   onTestGet(){
     this._httpService.getTest()
       .subscribe(
-        data => this.getData = JSON.stringify(data),
+        data => {
+          this.metadata = data.nodeMetadata.layerNames;
+          var length = data.nodeMetadata.layerNames["length"];
+          for (var i = 0; i < length; i++){
+            this.nodeMetaArray[i] = data.nodeMetadata.layerNames[i];
+          }
+          console.log(length);
+          /*var length = data.nodeMetadata["length"];
+          for (var i = 0; i < length; i++){
+            this.nodeMetaArray[i] = data.nodeMetadata[i];
+          }
+          console.log(this.nodeMetaArray);*/
+          //this.metadata.nodeMetadata;
+        },
         error => alert(error),
         () => console.log("Finished")
       );
