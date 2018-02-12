@@ -1,7 +1,3 @@
-/**
- * Created by tinoglatzel on 09.02.18.
- */
-
 import { Component } from '@angular/core';
 import { LayerConfigsService } from "./layerconfigs.service";
 
@@ -19,14 +15,38 @@ export class LayerConfigsComponent {
     private _httpService:LayerConfigsService
   ) {}
 
-  getData: string;
+  layerAll: string;
+  coreData: any;
+  layerData: any;
 
-  onTestGet(){
-    this._httpService.getTest()
+
+  // getting all data from json file /mc/adminarea/layerconfigs
+  getLayerDataTest(){
+    this._httpService.getLayerData()
       .subscribe(
-        data => this.getData = JSON.stringify(data),
+        data => this.layerAll = JSON.stringify(data),
         error => alert(error),
-        () => console.log("Finished")
+        () => console.log(this.layerAll)
       );
+  }
+
+  // getting core layer configurations data
+  getCoreLayers(){
+    this._httpService.getLayerData()
+      .subscribe(
+        data => this.coreData = data.coreLayerConfigs,
+        error => alert(error),
+        () => console.log(this.coreData)
+      )
+  }
+
+  // getting layer configurations data
+  getLayers(){
+    this._httpService.getLayerData()
+      .subscribe(
+        data => this.layerData = data.layerConfigs,
+        error => alert(error),
+        () => console.log(this.layerData)
+      )
   }
 }

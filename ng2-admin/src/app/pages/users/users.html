@@ -1,5 +1,65 @@
 <br><br>
 
-<button class="status-content"(click)="onTestGet()">Test Filtered GET Request</button><<br>
-<p class="users-content">Outlet: {{getData}}</p>
+<button class="users-content" (click)="getUsersTest()">Get All Data</button>
+<p class="users-content">Outlet: {{usersAll}}</p>
 
+<br>
+
+
+<h4 class="users-content">Agent Owner
+  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgentOwner()">Search for Agent Owners</button>
+</h4>
+
+<br>
+<div class="vertical-scroll users-content">
+  <table class="table table-striped users-table">
+    <thead>
+    <tr>
+      <th class="table-id">#</th>
+      <th></th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Birthday</th>
+    </tr>
+    </thead>
+    <!--<tbody>-->
+    <!--<tr>-->
+      <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
+      <!--<td></td>-->
+      <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
+      <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
+      <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  </table>
+</div>
+
+<br><br>
+
+<h4 class="users-content">Agents
+  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgents()">Search for Agents</button>
+</h4>
+
+<br>
+<div class="vertical-scroll users-content">
+  <table class="table table-striped users-table">
+    <thead>
+    <tr>
+      <th class="table-id">#</th>
+      <th></th>
+      <th>Owner</th>
+      <th>Type</th>
+      <th>Name</th>
+    </tr>
+    </thead>
+    <!--<tbody>-->
+    <!--<tr>-->
+      <!--<td class="table-id">{{agentData.agentId}}</td>-->
+      <!--<td></td>-->
+      <!--<td>{{agentData.agentBody.owner}}</td>-->
+      <!--<td>{{agentData.agentBody.type}}</td>-->
+      <!--<td>{{agentData.agentBody.name}}</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  </table>
+</div>

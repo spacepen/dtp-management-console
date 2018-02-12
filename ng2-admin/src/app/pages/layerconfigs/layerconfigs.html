@@ -1,4 +1,64 @@
 <br><br>
 
-<button class="status-content"(click)="onTestGet()">Test Filtered GET Request</button><<br>
-<p class="layer-content">Outlet: {{getData}}</p>
+<button class="layer-content"(click)="getLayerDataTest()">Test Filtered GET Request</button><<br>
+<p class="layer-content">Outlet: {{layerAll}}</p>
+
+<br>
+
+<h4 class="layer-content">Core Layer Configurations
+  <button type="button" class="btn btn-primary btn-raised layer-content layer-btn" (click)="getCoreLayers()">Search for Core Layers</button>
+</h4>
+
+<br>
+<div class="vertical-scroll layer-content">
+  <table class="table table-striped layer-table">
+    <thead>
+    <tr>
+      <th class="table-id">#</th>
+      <th></th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Birthday</th>
+    </tr>
+    </thead>
+    <!--<tbody>-->
+    <!--<tr>-->
+    <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
+    <!--<td></td>-->
+    <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
+    <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
+    <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  </table>
+</div>
+
+<br><br>
+
+<h4 class="layer-content">Layer Configurations
+  <button type="button" class="btn btn-primary btn-raised layer-content layer-btn" (click)="getLayers()">Search for Layers</button>
+</h4>
+
+<br>
+<div class="vertical-scroll layer-content">
+  <table class="table table-striped layer-table">
+    <thead>
+    <tr>
+      <th class="table-id">#</th>
+      <th></th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Birthday</th>
+    </tr>
+    </thead>
+    <!--<tbody>-->
+    <!--<tr>-->
+    <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
+    <!--<td></td>-->
+    <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
+    <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
+    <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  </table>
+</div>

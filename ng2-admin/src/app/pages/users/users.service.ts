@@ -1,7 +1,3 @@
-/**
- * Created by tinoglatzel on 10.02.18.
- */
-
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
 import 'rxjs/add/operator/map';
@@ -10,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class UsersService{
   constructor(private _http: Http){}
 
-  getTest(){
+  getUserData(){
 
     return this._http.get('http://localhost:8080/dtp/mc/adminarea/users').map(res => res.json());
   }
