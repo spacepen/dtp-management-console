@@ -1,8 +1,3 @@
-/**
- * Created by tinoglatzel on 09.02.18.
- */
-
-
 import { Component } from '@angular/core';
 import { UsersService } from "./users.service";
 
@@ -18,14 +13,58 @@ export class UsersComponent {
     private _httpService:UsersService
   ) {}
 
-  getData: string;
+  usersAll: string;
+  agentData: Array<any>;
+  agentOwnerData: any;
 
-  onTestGet(){
-    this._httpService.getTest()
+
+  // getting all data from json file /mc/adminarea/users
+  getUsersTest(){
+    this._httpService.getUserData()
       .subscribe(
-        data => this.getData = JSON.stringify(data),
+        data => this.usersAll = JSON.stringify(data),
         error => alert(error),
-        () => console.log("Finished")
+        () => console.log(this.usersAll)
       );
   }
+
+  // getting agentOwners data
+  getAgentOwner(){
+    this._httpService.getUserData()
+      .subscribe(
+        data => this.agentOwnerData = data.agentOwners[0],
+        error => alert(error),
+        () => console.log(this.agentOwnerData)
+      );
+  }
+
+  // getting agents data
+  getAgents(){
+    this._httpService.getUserData()
+      .subscribe(
+        data => this.agentData = data.agents[0],
+        error => alert(error),
+        () => console.log(this.agentData)
+      );
+  }
+
+
+
+
+  // getAgentsTest(){
+  //   this._httpService.getUsers()
+  //     .subscribe(
+  //       data => {
+  //         this.agentList = data.agents;
+  //         /*var length = data.nodeMetadata.layerNames["length"];
+  //          for (var i = 0; i < length; i++){
+  //          this.nodeMetaArray[i] = data.nodeMetadataList.layerNames[i];
+  //          }
+  //          console.log(length);*/
+  //       },
+  //       error => alert(error),
+  //       () => console.log("Finished: " + this.agentList)
+  //     );
+  // }
+
 }
