@@ -1,7 +1,7 @@
 /**
  * Created by tomda on 28.01.2018.
  */
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { StatusService } from './status.service';
 
 
@@ -11,46 +11,56 @@ import { StatusService } from './status.service';
   styleUrls: ['./status.scss'],
   providers: [StatusService]
 })
-export class StatusComponent {
+export class StatusComponent implements AfterViewInit {
 
   postData: string;
   getData: string;
-  getData1: string;
+  info: any;
+  infoArray = [];
   nodeMetadataList: any;
   nodeMetaArray = [];
   nodeTimestamp: any;
   date: any;
+  layernames = [];
+  nodeip: any;
+  nodeport: any;
+  layerbeans = [];
 
  constructor(private _httpService:StatusService){}
 
- onTestPost(){
+ /*onTestPost(){
     this._httpService.postTest()
       .subscribe(
       data => this.postData = JSON.stringify(data),
       error => alert(error),
       () => console.log("Finished")
       );
- }
-  onTestGet(){
-    this._httpService.getTest()
+ }*/
+
+  ngAfterViewInit(){
+    this.onTestGet1();
+    this.getInfoData();
+  }
+
+  getInfoData(){
+    this._httpService.getInfo()
       .subscribe(
-        data => {
-          this.nodeMetadataList = data.nodeMetadata.layerNames;
-          /*var length = data.nodeMetadata.layerNames["length"];
-          for (var i = 0; i < length; i++){
-            this.nodeMetaArray[i] = data.nodeMetadataList.layerNames[i];
-          }
-          console.log(length);*/
+        res => {
+          this.infoArray = res;
+          console.log(this.infoArray);
         },
-        error => alert(error),
         () => console.log("Finished")
-      );
+      )
   }
 
   onTestGet1(){
-    this._httpService.getTest1()
+    this._httpService.getMetadata()
       .subscribe(
         data => {
+          this.nodeip = data.nodeMetadata.ip;
+          this.nodeport = data.nodeMetadata.port;
+          this.layernames = data.nodeMetadata.layerNames;
+          this.layerbeans = data.nodeMetadata.layerBeans;
           this.nodeTimestamp = data.nodeMetadata.bootstrapTimestamp;
           var d = new Date(this.nodeTimestamp);
           var formattedDate = d.getDate() + "-" + (d.getMonth()+1)+ "-" +  d.getFullYear();

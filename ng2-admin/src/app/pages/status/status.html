@@ -1,22 +1,55 @@
 
-<div class="status-content">Hallo!!!</div>
+<h2 class="status-content">Here you can see the Status / Metadata of the DTP</h2>
 
 <br><br>
 
-<button class="status-content" (click)="onTestPost()">Test POST Request</button>
+<div class="col-md-5 nodeMeta">
+  <h3 class="status-content nodeMeta-header">Node Metadata</h3>
+  <p class="status-content"><strong>IP:</strong> {{ nodeip }}</p>
+  <p class="status-content"><strong>Port:</strong> {{ nodeport }}</p>
+  <p class="status-content"><strong>Layer Names:</strong></p>
+  <span class="status-content" *ngFor="let item of layernames">{{ item }}, </span>
+  <br><br>
+  <p class="status-content"><strong>Layer Beans:</strong></p>
+  <span class="status-content" *ngFor="let item of layerbeans">{{ item }}, </span>
+  <br><br>
+  <p class="status-content"><strong>Date:</strong> {{ date }}</p>
+</div>
+
 <br><br>
-<p class="status-content">Outlet: {{postData}}</p>
 
-<br>
-
-<button class="status-content"(click)="onTestGet()">Test GET Request new</button>
-<br><br>
-<p class="status-content">LayerNames: {{nodeMetadataList}}</p>
-
-<br>
-
-<button class="status-content"(click)="onTestGet1()">Test GET Request old</button>
-<br><br>
-<p class="status-content">BootstrapTimestamp as Date: {{date}}</p>
+<div class="channels-block col-md-5">
+<div class="channels-info">
+  <h3 class="status-content channel-header">Blockchain Status</h3>
+  <div>
+    <div class="channels-info-item status-content">
+      <div class="legend-color"></div>
+      <p class="activities-content">Pool Transactions<span class="channel-number">{{ infoArray.poolTransactions }}</span></p>
+      <div class="progress progress-sm channel-progress">
+        <div class="progress-bar" role="progressbar">
+        </div>
+      </div>
+      <div class="legend-color"></div>
+      <p class="activities-content">Queue Blocks<span class="channel-number">{{ infoArray.queueBlocks }}</span></p>
+      <div class="progress progress-sm channel-progress">
+        <div class="progress-bar" role="progressbar">
+        </div>
+      </div>
+      <div class="legend-color"></div>
+      <p class="activities-content">Chain Blocks<span class="channel-number">{{ infoArray.chainBlocks }}</span></p>
+      <div class="progress progress-sm channel-progress">
+        <div class="progress-bar" role="progressbar">
+        </div>
+      </div>
+      <div class="legend-color"></div>
+      <p class="activities-content">Ibd Blocks<span class="channel-number">{{ infoArray.ibdBlocks }}</span></p>
+      <div class="progress progress-sm channel-progress">
+        <div class="progress-bar" role="progressbar">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
 
