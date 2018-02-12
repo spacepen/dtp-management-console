@@ -17,8 +17,7 @@ export class StatusComponent implements AfterViewInit {
   getData: string;
   info: any;
   infoArray = [];
-  nodeMetadataList: any;
-  nodeMetaArray = [];
+  blockchainArray = [];
   nodeTimestamp: any;
   date: any;
   layernames = [];
@@ -40,6 +39,17 @@ export class StatusComponent implements AfterViewInit {
   ngAfterViewInit(){
     this.onTestGet1();
     this.getInfoData();
+  }
+
+  getBlockchainData(){
+    this._httpService.getMetadata()
+      .subscribe(
+        res => {
+          this.blockchainArray = res.blockchainMetadata;
+          console.log(this.blockchainArray);
+        },
+        () => console.log("Finished "+this.blockchainArray)
+      )
   }
 
   getInfoData(){

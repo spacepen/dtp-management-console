@@ -4,6 +4,22 @@
   color: black;
 }
 
+.blockchain-data{
+  position: relative;
+  background-color: $bootstrap-panel-bg;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 50px;
+  border-radius: 5px;
+  border-color: rgb(100, 100, 100);
+  box-shadow: 5px 5px 3px rgba(150, 150, 150, 0.2);
+  margin-bottom: 10px;
+
+  .nodeMeta-header{
+    padding-bottom: 10px;
+  }
+}
+
 .nodeMeta{
   position: relative;
   background-color: $bootstrap-panel-bg;
@@ -14,6 +30,7 @@
   border-color: rgb(100, 100, 100);
   box-shadow: 5px 5px 3px rgba(150, 150, 150, 0.2);
   margin-bottom: 10px;
+  margin-left: 10px;
 
   .nodeMeta-header{
     padding-bottom: 10px;
