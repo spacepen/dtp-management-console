@@ -5,60 +5,71 @@
 
 <!--<canvas id="doughnut" width="400px" height="400px">{{ chart }}</canvas>-->
 
-<div class="channels-block col-md-5">
-  <div class="channels-info">
-    <h3 class="activities-content channel-header">Activities Counter</h3>
-    <div>
-      <div class="channels-info-item status-content">
-        <div class="legend-color"></div>
-        <p class="activities-content">New Pool Transactions<span class="channel-number">{{ statsArray.newPoolTransactionCount }}</span></p>
-        <div class="progress progress-sm channel-progress">
-          <div class="progress-bar" role="progressbar">
+  <div class="channels-block col-md-5">
+    <div class="channels-info">
+      <h3 class="activities-content channel-header">Activities Counter</h3>
+      <div>
+        <div class="channels-info-item status-content">
+          <div class="legend-color"></div>
+          <p class="activities-content">New Pool Transactions<span class="channel-number">{{ newPoolTrans }}</span></p>
+          <div class="progress progress-sm channel-progress">
+            <div class="progress-bar" role="progressbar">
+            </div>
           </div>
-        </div>
-        <div class="legend-color"></div>
-        <p class="activities-content">New Queue Blocks<span class="channel-number">{{ statsArray.newQueueBlockCount }}</span></p>
-        <div class="progress progress-sm channel-progress">
-          <div class="progress-bar" role="progressbar">
+          <div class="legend-color"></div>
+          <p class="activities-content">New Queue Blocks<span class="channel-number">{{ newQuBlocks }}</span></p>
+          <div class="progress progress-sm channel-progress">
+            <div class="progress-bar" role="progressbar">
+            </div>
           </div>
-        </div>
-        <div class="legend-color"></div>
-        <p class="activities-content">New Chain Blocks<span class="channel-number">{{ statsArray.newChainBlockCount }}</span></p>
-        <div class="progress progress-sm channel-progress">
-          <div class="progress-bar" role="progressbar">
+          <div class="legend-color"></div>
+          <p class="activities-content">New Chain Blocks<span class="channel-number">{{ newChBlocks }}</span></p>
+          <div class="progress progress-sm channel-progress">
+            <div class="progress-bar" role="progressbar">
+            </div>
           </div>
-        </div>
-        <div class="legend-color"></div>
-        <p class="activities-content">New Ibd Blocks<span class="channel-number">{{ statsArray.newIbdBlockCount }}</span></p>
-        <div class="progress progress-sm channel-progress">
-          <div class="progress-bar" role="progressbar">
+          <div class="legend-color"></div>
+          <p class="activities-content">New Ibd Blocks<span class="channel-number">{{ newIbdBlocks }}</span></p>
+          <div class="progress progress-sm channel-progress">
+            <div class="progress-bar" role="progressbar">
+            </div>
           </div>
-        </div>
-        <div class="legend-color"></div>
-        <p class="activities-content">New Votes<span class="channel-number">{{ statsArray.newVoteCount }}</span></p>
-        <div class="progress progress-sm channel-progress">
-          <div class="progress-bar" role="progressbar">
+          <div class="legend-color"></div>
+          <p class="activities-content">New Votes<span class="channel-number">{{ newVotes }}</span></p>
+          <div class="progress progress-sm channel-progress">
+            <div class="progress-bar" role="progressbar">
+            </div>
           </div>
-        </div>
-        <div class="legend-color"></div>
-        <p class="activities-content">Removed Pool Transactions<span class="channel-number">{{ statsArray.removedPoolTransactionCount }}</span></p>
-        <div class="progress progress-sm channel-progress">
-          <div class="progress-bar" role="progressbar">
+          <div class="legend-color"></div>
+          <p class="activities-content">Removed Pool Transactions<span class="channel-number">{{ removedPoolTrans }}</span></p>
+          <div class="progress progress-sm channel-progress">
+            <div class="progress-bar" role="progressbar">
+            </div>
           </div>
-        </div>
-        <div class="legend-color"></div>
-        <p class="activities-content">Removed Queue Blocks<span class="channel-number">{{ statsArray.removedQueueBlockCount }}</span></p>
-        <div class="progress progress-sm channel-progress">
-          <div class="progress-bar" role="progressbar">
+          <div class="legend-color"></div>
+          <p class="activities-content">Removed Queue Blocks<span class="channel-number">{{ removedQuBlocks }}</span></p>
+          <div class="progress progress-sm channel-progress">
+            <div class="progress-bar" role="progressbar">
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <br>
+    <div class="button-wrapper">
+      <button type="button" class="btn btn-primary btn-raised" (click)="getActivitiesCount()">Update</button>
+    </div>
   </div>
-  <br>
-  <div class="button-wrapper">
-    <button type="button" class="btn btn-primary btn-raised" (click)="getActivitiesCount()">Update</button>
-  </div>
+
+<br><br>
+
+<div class="channels-block" *ngIf="chart">
+  <canvas id="canvas">{{ chart }}</canvas>
 </div>
+
+<!--  <div class="col-md-5 channels-block">
+    <ba-am-chart baAmChartClass="dashboard-line-chart" [baAmChartConfiguration]="chartData">
+    </ba-am-chart>
+  </div>-->
 
 

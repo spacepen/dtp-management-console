@@ -15,113 +15,150 @@ import {BaThemeConfigProvider, colorHelper} from '../../theme';
 })
 
 
-export class ActivitiesComponent  {
+export class ActivitiesComponent implements AfterViewInit {
 
   chart = [];
-
-  public doughnutData: Array<Object>;
-  stats: any;
-  traffic: any;
-  transactionCount: any;
-  quBlockCount: any;
-  chBlockCount: any;
-  ibdBlockCount: any;
-  voteCount: any;
-  removedTransactionCount: any;
-  removedQuBlockCount: any;
-  canvas: any;
-  ctx: any;
-  statsArray = [];
+  statsTransArray = [];
+  transEntitieArray = [];
+  newPoolTransEntitieArray = [];
+  newPoolTransTimestampArray = [];
+  transDate: any;
+  newPoolTrans: any;
+  newQuBlocks: any;
+  newChBlocks: any;
+  newIbdBlocks: any;
+  newVotes: any;
+  removedPoolTrans: any;
+  removedQuBlocks: any;
+  chartData: Object;
+  chart1: any;
+  lineTimestamp: any;
+  lineEntities: any;
 
   constructor(private _httpService:ActivitiesService){}
 
   ngOnInit() {
-    this.onTestGet();
     this.getActivitiesCount();
+    this.getLineDataNew();
+    //this.getLineData();
+  }
+
+  ngAfterViewInit(){
+    //this.initChart();
   }
 
   getActivitiesCount(){
     this._httpService.getTrafficData()
       .subscribe(
         res => {
-          this.statsArray = res;
-          console.log("statsArray: "+this.statsArray);
+          this.newPoolTrans = res.newPoolTransactionCount;
+          this.newQuBlocks = res.newQueueBlockCount;
+          this.newChBlocks = res.newChainBlockCount;
+          this.newIbdBlocks = res.newIbdBlockCount;
+          this.newVotes = res.newVoteCount;
+          this.removedPoolTrans = res.removedPoolTransactionCount;
+          this.removedQuBlocks = res.removedQueueBlockCount;
         },
         () => console.log("Finished")
       )
   }
 
-  onTestGet() {
+  getLineDataNew(){
     this._httpService.getTrafficData()
       .subscribe(
-        data => {
+        res => {
+          let timestamp = res['newPoolTransactions'].map(res => res.timestamp);
+          let entity = res['newPoolTransactions'].map(res => res.entities);
+          let length = entity['length'];
 
-          let newPoolTransactionCount = data.newPoolTransactionCount;
-          let quBlockCount = data.newQueueBlockCount;
-          let chBlockCount = data.newChainBlockCount;
-          //console.log(newPoolTransactionCount);
+          let dates = [];
+          timestamp.forEach((res) => {
+            let jsdate = new Date(res);
+            dates.push(jsdate.toLocaleTimeString('en', {year: 'numeric', month: 'short', day: 'numeric'}))
+          });
 
-          this.canvas = document.getElementById('doughnut');
-          this.ctx = this.canvas.getContext('2d');
+          console.log(dates);
+          console.log(length);
 
-          this.chart = new Chart('doughnut', {
-            type: 'doughnut',
+          this.chart = new Chart('canvas', {
+            type:'line',
             data: {
-              labels: ['Hallo'],
+              labels: dates,
               datasets: [
                 {
-                  data: newPoolTransactionCount,
-                  backgroundColor: '#00abff'
-                },
-                {
-                  data: quBlockCount,
-                  backgroundColor: '#000000'
-                },
-                {
-                  data: chBlockCount,
-                  backgroundColor: '#739573'
+                  data: length,
+                  borderColor: '#00abff',
+                  fill: false
                 }
               ]
             },
             options: {
-              cutoutPercentage: 50,
-              rotation: -0.5 * Math.PI,
-              circumference: 2 * Math.PI,
-              display: true
+              legend:{
+                display: false
+              },
+              scales:{
+                xAxes: [{
+                  display: true
+                }],
+                yAxes:[{
+                  display: true
+                }]
+              }
             }
-          });
-          /*this.transactionCount = data.newPoolTransactionsCount;
-          this.quBlockCount = data.newQueueBlockCount;
-          this.chBlockCount = data.newChainBlockCount;
-          this.ibdBlockCount = data.newIbdBlockCount;
-          this.voteCount = data.newVoteCount;
-          this.removedTransactionCount = data.removedPoolTransactionCount;
-          this.removedQuBlockCount = data.removedQueueBlockCount;*/
-        },
-        error => alert(error),
-        () => console.log("Finished ")
-      );
+          })
+
+        }
+        )
   }
 
-  /*values(){
-    this._httpService.transactionCount = this.transactionCount;
-    this._httpService.quBlockCount = this.quBlockCount;
-    this._httpService.chBlockCount = this.chBlockCount;
-    this._httpService.ibdBlockCount = this.ibdBlockCount;
-    this._httpService.voteCount = this.voteCount;
-    this._httpService.removedTransactionCount = this.removedTransactionCount;
-    this._httpService.removedQuBlockCount = this.removedQuBlockCount;
-  }
+  /*getLineData(){
+    this._httpService.getTrafficData()
+      .subscribe(
+        res => {
+          this.statsTransArray = res.newPoolTransactions;
+          var length = this.statsTransArray["length"];
+          for (var i = 0; i < length; i++){
 
-  private _loadDoughnutCharts() {
-    this.doughnutData = this._httpService.makeTrafficValues();
-    console.log(this.doughnutData);
-    let el = jQuery('.chart-area').get(0) as HTMLCanvasElement;
-    new Chart(el.getContext('2d')).Doughnut(this.doughnutData, {
-      segmentShowStroke: false,
-      percentageInnerCutout : 64,
-      responsive: true
-    });
+            this.newPoolTransTimestampArray[i] = this.statsTransArray[i].timestamp;
+            var d = new Date(this.newPoolTransTimestampArray[i]);
+            var formattedDate = d.getDate() + "-" + (d.getMonth()+1)+ "-" +  d.getFullYear();
+            var hours = (d.getHours()<10) ? "0" + d.getHours() : d.getHours();
+            //var minutes = (d.getMinutes()<10) ? "0" + d.getMinutes() : d.getMinutes;
+            var formattedTime = hours + "h";
+            formattedDate = formattedDate + " " + formattedTime;
+            this.transDate = formattedDate;
+            this._httpService.lineDate = this.transDate;
+
+            this.newPoolTransEntitieArray[i] = this.statsTransArray[i].entities;
+            var entitieLength = this.newPoolTransEntitieArray["length"];
+
+            for (var j = 0; j < entitieLength; j++){
+              this.transEntitieArray[i] = this.newPoolTransEntitieArray[i].length;
+              this._httpService.lineValue = this.transEntitieArray[i];
+            }
+          }
+          console.log(this.statsTransArray);
+          console.log(this.newPoolTransTimestampArray);
+          console.log(this.newPoolTransEntitieArray);
+          console.log(this.transEntitieArray);
+          console.log(this._httpService.lineDate);
+          console.log(this._httpService.lineValue);
+        }
+      )
+  }*/
+
+  /*initChart() {
+    this.chartData = this._httpService.getLineData();
+    /!*let zoomChart = () => {
+      this.chart1.zoomToDates(this._httpService.lineDate);
+    };
+
+    this.chart1.addListener('rendered', zoomChart);
+    zoomChart();
+
+    if (this.chart1.zoomChart) {
+      this.chart1.zoomChart();
+    }*!/
   }*/
 
 
