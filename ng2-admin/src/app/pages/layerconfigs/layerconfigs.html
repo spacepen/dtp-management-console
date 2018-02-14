@@ -1,64 +1,31 @@
-<br><br>
-
-<button class="layer-content"(click)="getLayerDataTest()">Test Filtered GET Request</button><<br>
-<p class="layer-content">Outlet: {{layerAll}}</p>
+<!-- All layer configuration boxes are getting visualized dynamically with the "*ngFor"-statement -->
 
 <br>
 
 <h4 class="layer-content">Core Layer Configurations
-  <button type="button" class="btn btn-primary btn-raised layer-content layer-btn" (click)="getCoreLayers()">Search for Core Layers</button>
+  <button type="button" class="btn btn-primary btn-raised layer-content layer-btn" (click)="getCoreLayers()">Refresh Core Layers</button>
 </h4>
-
-<br>
-<div class="vertical-scroll layer-content">
-  <table class="table table-striped layer-table">
-    <thead>
-    <tr>
-      <th class="table-id">#</th>
-      <th></th>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Birthday</th>
-    </tr>
-    </thead>
-    <!--<tbody>-->
-    <!--<tr>-->
-    <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
-    <!--<td></td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
-  </table>
+<i class="layer-content">Below are the configurations of the current core layers.</i>
+<br><br>
+<div class="col-md-12 layer-box" *ngFor="let item of coreData">
+  <br>
+  <strong class="layer-content box-header"> {{ item.key }} </strong>
+  <br><br>
+  <p class="layer-content"><strong>Classname:</strong> {{ item.value.classname }} </p>
+  <p class="layer-content"><strong>Summary:</strong><br><i> {{ item.value.configSummary }} </i></p>
 </div>
 
-<br><br>
+<br><br><br>
 
 <h4 class="layer-content">Layer Configurations
-  <button type="button" class="btn btn-primary btn-raised layer-content layer-btn" (click)="getLayers()">Search for Layers</button>
+  <button type="button" class="btn btn-primary btn-raised layer-content layer-btn" (click)="getLayers()">Refresh Layers</button>
 </h4>
-
-<br>
-<div class="vertical-scroll layer-content">
-  <table class="table table-striped layer-table">
-    <thead>
-    <tr>
-      <th class="table-id">#</th>
-      <th></th>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Birthday</th>
-    </tr>
-    </thead>
-    <!--<tbody>-->
-    <!--<tr>-->
-    <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
-    <!--<td></td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
-  </table>
+<i class="layer-content">Below are the configurations of the current layers.</i>
+<br><br>
+<div class="col-md-12 layer-box" *ngFor="let item of layerData">
+  <br>
+  <strong class="layer-content box-header"> {{ item.key }} </strong>
+  <br><br>
+  <p class="layer-content"><strong>Classname:</strong> {{ item.value.classname }} </p>
+  <p class="layer-content"><strong>Summary:</strong><br><i> {{ item.value.configSummary }} </i></p>
 </div>
