@@ -83,7 +83,7 @@ export const PAGES_MENU = [
           }
         ]
       },
-      {
+      /*{
         path: 'dashboard',  // path for our page
         data: { // custom menu declaration
           menu: {
@@ -95,7 +95,7 @@ export const PAGES_MENU = [
             order: 0
           }
         }
-      },
+      },*/
       /*{
         path: 'editors',
         data: {
@@ -140,7 +140,7 @@ export const PAGES_MENU = [
           }
         ]
       },*/
-      {
+      /*{
         path: 'charts',
         data: {
           menu: {
@@ -161,7 +161,7 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
+      },*/
       /*{
         path: 'ui',
         data: {

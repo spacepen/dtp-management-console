@@ -20,11 +20,9 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home',  loadChildren: './home/home.module#HomeModule' },
-      { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
       { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
       { path: 'status', loadChildren: './status/status.module#StatusModule'},
       { path: 'activities', loadChildren: './activities/activities.module#ActivitiesModule'},
-      { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
       { path: 'users', loadChildren: './users/users.module#UsersModule'},
       { path: 'layerconfigs', loadChildren: './layerconfigs/layerconfigs.module#LayerConfigsModule'},
       { path: 'bcrawdata', loadChildren: './bcrawdata/bcrawdata.module#BcRawDataModule'}
