@@ -1,3 +1,4 @@
+<!-- All layer configuration boxes are getting visualized dynamically with the "*ngFor"-statement -->
 
 <br>
 
@@ -14,7 +15,7 @@
   <p class="layer-content"><strong>Summary:</strong><br><i> {{ item.value.configSummary }} </i></p>
 </div>
 
-<br><br>
+<br><br><br>
 
 <h4 class="layer-content">Layer Configurations
   <button type="button" class="btn btn-primary btn-raised layer-content layer-btn" (click)="getLayers()">Refresh Layers</button>
@@ -28,4 +29,3 @@
   <p class="layer-content"><strong>Classname:</strong> {{ item.value.classname }} </p>
   <p class="layer-content"><strong>Summary:</strong><br><i> {{ item.value.configSummary }} </i></p>
 </div>
-

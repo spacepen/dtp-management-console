@@ -1,65 +1,56 @@
-<br><br>
 
-<button class="users-content" (click)="getUsersTest()">Get All Data</button>
-<p class="users-content">Outlet: {{usersAll}}</p>
-
-<br>
 
 
 <h4 class="users-content">Agent Owner
-  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgentOwner()">Search for Agent Owners</button>
+  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgentOwner()">Search new for Agent Owners</button>
 </h4>
-
-<br>
+<i class="users-content">Look through current agent owners.</i>
+<br><br>
 <div class="vertical-scroll users-content">
   <table class="table table-striped users-table">
     <thead>
     <tr>
-      <th class="table-id">#</th>
-      <th></th>
-      <th>Last Name</th>
-      <th>First Name</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
       <th>Birthday</th>
     </tr>
     </thead>
-    <!--<tbody>-->
-    <!--<tr>-->
-      <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
-      <!--<td></td>-->
-      <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
-      <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
-      <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
+    <tbody>
+    <tr  *ngFor="let item of agentOwnerData">
+      <td> {{item.agentOwnerBody.firstName}} {{item.agentOwnerBody.lastName}} </td>
+      <td> {{item.agentOwnerBody.email}} </td>
+      <td> {{item.agentOwnerBody.address}} </td>
+      <td> {{item.agentOwnerBody.birthday}} </td>
+    </tr>
+    </tbody>
   </table>
 </div>
 
-<br><br>
+<br><br><br><br>
 
 <h4 class="users-content">Agents
-  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgents()">Search for Agents</button>
+  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgents()">Search new for Agents</button>
 </h4>
-
-<br>
+<i class="users-content">Look through current agents.</i>
+<br><br>
 <div class="vertical-scroll users-content">
   <table class="table table-striped users-table">
     <thead>
     <tr>
-      <th class="table-id">#</th>
-      <th></th>
+      <th>Version</th>
       <th>Owner</th>
       <th>Type</th>
       <th>Name</th>
     </tr>
     </thead>
-    <!--<tbody>-->
-    <!--<tr>-->
-      <!--<td class="table-id">{{agentData.agentId}}</td>-->
-      <!--<td></td>-->
-      <!--<td>{{agentData.agentBody.owner}}</td>-->
-      <!--<td>{{agentData.agentBody.type}}</td>-->
-      <!--<td>{{agentData.agentBody.name}}</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
+    <tbody>
+    <tr  *ngFor="let item of agentData">
+      <td> {{item.agentBody.version}} </td>
+      <td> {{item.agentBody.owner}} </td>
+      <td> {{item.agentBody.type}} </td>
+      <td> {{item.agentBody.name}} </td>
+    </tr>
+    </tbody>
   </table>
 </div>

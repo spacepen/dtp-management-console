@@ -43,7 +43,8 @@ export class LayerConfigsComponent implements AfterViewInit {
         data => this.coreData = data.coreLayerConfigs,
         error => alert(error),
         () => console.log(this.coreData)
-      )
+
+  )
   }
 
   // getting layer configurations data
@@ -55,4 +56,6 @@ export class LayerConfigsComponent implements AfterViewInit {
         () => console.log(this.layerData)
       )
   }
+
 }
+

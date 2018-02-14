@@ -14,9 +14,15 @@ export class UsersComponent {
   ) {}
 
   usersAll: string;
-  agentData: Array<any>;
+  agentData: any;
   agentOwnerData: any;
 
+
+  // showing data of methods below after loading the page
+  ngAfterViewInit(){
+    this.getAgentOwner();
+    this.getAgents();
+  }
 
   // getting all data from json file /mc/adminarea/users
   getUsersTest(){
@@ -32,7 +38,7 @@ export class UsersComponent {
   getAgentOwner(){
     this._httpService.getUserData()
       .subscribe(
-        data => this.agentOwnerData = data.agentOwners[0],
+        data => this.agentOwnerData = data.agentOwners,
         error => alert(error),
         () => console.log(this.agentOwnerData)
       );
@@ -42,7 +48,7 @@ export class UsersComponent {
   getAgents(){
     this._httpService.getUserData()
       .subscribe(
-        data => this.agentData = data.agents[0],
+        data => this.agentData = data.agents,
         error => alert(error),
         () => console.log(this.agentData)
       );
