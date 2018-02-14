@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, AfterViewInit} from '@angular/core';
 import { LayerConfigsService } from "./layerconfigs.service";
 
 @Component({
@@ -9,7 +9,7 @@ import { LayerConfigsService } from "./layerconfigs.service";
 
 })
 
-export class LayerConfigsComponent {
+export class LayerConfigsComponent implements AfterViewInit {
 
   constructor(
     private _httpService:LayerConfigsService
@@ -20,7 +20,13 @@ export class LayerConfigsComponent {
   layerData: any;
 
 
-  // getting all data from json file /mc/adminarea/layerconfigs
+  // showing data of methods below after loading the page
+  ngAfterViewInit(){
+    this.getCoreLayers();
+    this.getLayers();
+  }
+
+  // getting all data from json file /mc/adminarea/layerconfigs ... (currently not used)
   getLayerDataTest(){
     this._httpService.getLayerData()
       .subscribe(
