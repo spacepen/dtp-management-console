@@ -18,6 +18,10 @@ export class StatusComponent implements AfterViewInit {
   info: any;
   infoArray = [];
   blockchainArray = [];
+  genesisArray = [];
+  genesisPayload = [];
+  genesisAO = [];
+  genesisAOBody = [];
   nodeTimestamp: any;
   date: any;
   layernames = [];
@@ -38,7 +42,21 @@ export class StatusComponent implements AfterViewInit {
 
   ngAfterViewInit(){
     this.onTestGet1();
+    this.getBlockchainData();
     this.getInfoData();
+    this.getGenesisBlock();
+  }
+
+  showAO(){
+    let div = document.getElementById("agent-owner");
+    let button = document.getElementById("agentOButton");
+    if (div.style.display == 'none'){
+      button.textContent = "Hide Initializer-Agent Owner";
+      div.style.display = 'block';
+    } else {
+      button.textContent = "Show Initializer-Agent Owner";
+      div.style.display = 'none';
+    }
   }
 
   getBlockchainData(){
@@ -49,6 +67,21 @@ export class StatusComponent implements AfterViewInit {
           console.log(this.blockchainArray);
         },
         () => console.log("Finished "+this.blockchainArray)
+      )
+  }
+
+  getGenesisBlock(){
+    this._httpService.getMetadata()
+      .subscribe(
+        res => {
+          this.genesisArray = res.blockchainMetadata.genesisBlock;
+          this.genesisPayload = res.blockchainMetadata.genesisBlock.payload.payload;
+          this.genesisAO = res.blockchainMetadata.genesisBlock.payload.payload.platformInitializerAO;
+          this.genesisAOBody = res.blockchainMetadata.genesisBlock.payload.payload.platformInitializerAO.agentOwnerBody;
+          console.log(this.genesisArray);
+          console.log(this.genesisPayload);
+        },
+        () => console.log("Finished")
       )
   }
 
@@ -72,14 +105,9 @@ export class StatusComponent implements AfterViewInit {
           this.layernames = data.nodeMetadata.layerNames;
           this.layerbeans = data.nodeMetadata.layerBeans;
           this.nodeTimestamp = data.nodeMetadata.bootstrapTimestamp;
-          var d = new Date(this.nodeTimestamp);
-          var formattedDate = d.getDate() + "-" + (d.getMonth()+1)+ "-" +  d.getFullYear();
-          var hours = (d.getHours()<10) ? "0" + d.getHours() : d.getHours();
-          //var minutes = (d.getMinutes()<10) ? "0" + d.getMinutes() : d.getMinutes;
-          var formattedTime = hours + "h";
-          formattedDate = formattedDate + " " + formattedTime;
-          this.date = formattedDate;
-          console.log(formattedDate);
+          this.nodeTimestamp = new Date(data.nodeMetadata.bootstrapTimestamp);
+          this.nodeTimestamp.toLocaleTimeString('en', {year: 'numeric', month: 'short', day: 'numeric'});
+          console.log(this.nodeTimestamp);
         },
             error => alert(error),
             () => console.log("Finished")

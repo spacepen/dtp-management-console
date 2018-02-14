@@ -3,8 +3,6 @@
 <br><br>
 <br><br>
 
-<!--<canvas id="doughnut" width="400px" height="400px">{{ chart }}</canvas>-->
-
   <div class="channels-block col-md-5">
     <div class="channels-info">
       <h3 class="activities-content channel-header">Activities Counter</h3>
@@ -63,9 +61,24 @@
 
 <br><br>
 
-<div class="channels-block" *ngIf="chart">
-  <canvas id="canvas">{{ chart }}</canvas>
-</div>
+<section class="chartist">
+  <div class="row">
+    <div class="col-md-5">
+      <ba-card cardTitle="Line Chart" baCardClass="with-scroll">
+        <h5>Line Chart</h5>
+        <ba-chartist-chart baChartistChartClass="ct-chart"
+                           baChartistChartType="Line"
+                           [baChartistChartData]="lineData['simpleLineData']"
+                           [baChartistChartOptions]="lineData['simpleLineOptions']">
+        </ba-chartist-chart>
+
+      </ba-card>
+    </div>
+  </div>
+  <div class="button-wrapper">
+    <button id="update-button" type="button" class="btn btn-primary btn-raised" (click)="calcTimestamp()">Update</button>
+  </div>
+</section>
 
 <!--  <div class="col-md-5 channels-block">
     <ba-am-chart baAmChartClass="dashboard-line-chart" [baAmChartConfiguration]="chartData">

@@ -14,7 +14,7 @@
     <p class="status-content"><strong>Layer Beans:</strong></p>
     <span class="status-content" *ngFor="let item of layerbeans">{{ item }}, </span>
     <br><br>
-    <p class="status-content"><strong>Date:</strong> {{ date }}</p>
+    <p class="status-content"><strong>Date:</strong> {{ nodeTimestamp }}</p>
   </div>
 
   <div class="col-md-1"></div>
@@ -25,22 +25,20 @@
       <p class="status-content"><strong>Id:</strong> {{ blockchainArray.id }}</p>
       <p class="status-content"><strong>Blockchain-Name:</strong> {{ blockchainArray.name }}</p>
       <p class="status-content"><strong>Description:</strong> {{ blockchainArray.description }}</p>
-      <p class="status-content"><strong>Initializor-Agent-Owner Id:</strong> {{ blockchainArray.initAoId }}</p>
-      <p class="status-content"><strong>Initializor-Agent-Owner First Name:</strong> {{ blockchainArray.initAoFirstName }}</p>
-      <p class="status-content"><strong>Initializor-Agent-Owner Last Name:</strong> {{ blockchainArray.initAoIdLastName }}</p>
-    </div>
-    <br>
-    <div class="button-wrapper">
-      <button type="button" class="btn btn-primary btn-raised" (click)="getBlockchainData()">Show Blockchain-Data</button>
+      <p class="status-content"><strong>Initializer-Agent Owner Id:</strong> {{ blockchainArray.initAoId }}</p>
+      <p class="status-content"><strong>Initializer-Agent Owner First Name:</strong> {{ blockchainArray.initAoFirstName }}</p>
+      <p class="status-content"><strong>Initializer-Agent Owner Last Name:</strong> {{ blockchainArray.initAoIdLastName }}</p>
     </div>
   </div>
 </div>
 
 <br><br>
 
+<div class="row">
+
 <div class="channels-block col-md-5">
+  <h3 class="status-content channel-header">Blockchain Status</h3>
   <div class="channels-info">
-    <h3 class="status-content channel-header">Blockchain Status</h3>
     <div>
       <div class="channels-info-item status-content">
         <div class="legend-color"></div>
@@ -74,6 +72,36 @@
   <div class="button-wrapper">
     <button type="button" class="btn btn-primary btn-raised" (click)="getInfoData()">Update</button>
   </div>
+</div>
+
+  <div class="col-md-1"></div>
+
+<div class="blockchain-data col-md-5">
+  <div>
+    <h3 class="status-content nodeMeta-header">Genesis Block</h3>
+    <p class="status-content"><strong>Id:</strong> {{ genesisArray.id }}</p>
+    <p class="status-content"><strong>DM-Version:</strong> {{ genesisArray.dmVersion }}</p>
+    <p class="status-content"><strong>Name:</strong> {{ genesisPayload.name }}</p>
+    <p class="status-content"><strong>Description:</strong> {{ genesisPayload.description }}</p>
+    <p class="status-content"><strong>Version:</strong> {{ genesisPayload.version }}</p>
+    <br>
+    <div id="agent-owner">
+      <h5 class="status-content nodeMeta-header">Initializer-Agent Owner Infos</h5>
+      <p class="status-content"><strong>Id:</strong> {{ genesisAO.agentOwnerId }}</p>
+      <p class="status-content"><strong>DM-Version:</strong> {{ genesisAO.dmVersion }}</p>
+      <p class="status-content"><strong>First Name:</strong> {{ genesisAOBody.firstName }}</p>
+      <p class="status-content"><strong>Last Name:</strong> {{ genesisAOBody.lastName }}</p>
+      <p class="status-content"><strong>Address:</strong> {{ genesisAOBody.address }}</p>
+      <p class="status-content"><strong>Phone:</strong> {{ genesisAOBody.phone }}</p>
+      <p class="status-content"><strong>E-Mail:</strong> {{ genesisAOBody.email }}</p>
+    </div>
+  </div>
+  <br>
+  <div class="button-wrapper">
+    <button type="button" id="agentOButton" class="btn btn-primary btn-raised" (click)="showAO()">Show Initializer-Agent Owner</button>
+  </div>
+</div>
+
 </div>
 
 

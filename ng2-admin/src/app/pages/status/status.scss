@@ -1,7 +1,12 @@
 @import '../../theme/sass/conf/conf';
 
-.status-content{
+.status-content {
   color: black;
+}
+
+#agent-owner{
+  display: none;
+  border-color: $primary-light thick;
 }
 
 .blockchain-data{
@@ -38,18 +43,22 @@
 }
 
 :host /deep/ .channels-block {
-  margin-top: 10px;
   //float: right;
   //width: 100%;
   position: relative;
   background-color: $bootstrap-panel-bg;
   padding-bottom: 10px;
+  padding-top: 10px;
   border-radius: 5px;
   border-color: rgb(100, 100, 100);
   box-shadow: 5px 5px 3px rgba(150, 150, 150, 0.2);
+  margin-bottom: 10px;
+  margin-left: 10px;
 
   .channel-header{
+    padding-bottom: 10px;
     padding-top: 10px;
+    padding-left: 50px;
   }
 
   .channels-info {
