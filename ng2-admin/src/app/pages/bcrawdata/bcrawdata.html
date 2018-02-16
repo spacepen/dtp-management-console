@@ -1,124 +1,66 @@
 <br><br>
 
-<button class="bc-content"(click)="getBcDataTest()">Test Filtered GET Request</button><<br>
-<p class="bc-content">Outlet: {{bcAll}}</p>
+<!--<button class="bc-content"(click)="getBcDataTest()">Test Filtered GET Request</button><<br>-->
+<!--<p class="bc-content">Outlet: {{bcAll}}</p>-->
 
-<br>
+<!--<br>-->
 
-<h4 class="bc-content">Pool Transactions
-  <button type="button" class="btn btn-primary btn-raised bc-content bc-btn" (click)="getPoolTransactions()">Search for Pool Transactions</button>
-</h4>
-
-<br>
-<div class="vertical-scroll bc-content">
-  <table class="table table-striped bc-table">
-    <thead>
-    <tr>
-      <th class="table-id">#</th>
-      <th></th>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Birthday</th>
-    </tr>
-    </thead>
-    <!--<tbody>-->
-    <!--<tr>-->
-    <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
-    <!--<td></td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
-  </table>
+<div class="bc-box col-md-12">
+  <h3 class="bc-content bc-header">Pool Transactions</h3>
+  <div id="pooltransactions-1">
+    <div *ngFor="let item of poolTransactionData">
+      <p class="bc-content"><strong>Id:</strong> {{ item.id }}</p>
+      <p class="bc-content"><strong>DM-Version:</strong> {{ item.dmVersion }}</p>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="button-wrapper">
+    <button type="button" id="pool1Button" class="btn btn-primary btn-raised" (click)="showPT()">Show Pool Transactions</button>
+  </div>
 </div>
 
-<br><br>
-
-<h4 class="bc-content">Queue Blocks
-  <button type="button" class="btn btn-primary btn-raised bc-content bc-btn" (click)="getQueueBlocks()">Search for Queue Blocks</button>
-</h4>
-
-<br>
-<div class="vertical-scroll bc-content">
-  <table class="table table-striped bc-table">
-    <thead>
-    <tr>
-      <th class="table-id">#</th>
-      <th></th>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Birthday</th>
-    </tr>
-    </thead>
-    <!--<tbody>-->
-    <!--<tr>-->
-    <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
-    <!--<td></td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
-  </table>
+<div class="bc-box col-md-12">
+  <h3 class="bc-content bc-header">Pool Transactions</h3>
+  <div id="queueblocks-1">
+    <div *ngFor="let item of queueBlockData">
+      <p class="bc-content"><strong>Id:</strong> {{ item.id }}</p>
+      <p class="bc-content"><strong>DM-Version:</strong> {{ item.dmVersion }}</p>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="button-wrapper">
+    <button type="button" id="queue1Button" class="btn btn-primary btn-raised" (click)="showQB()">Show Queue Blocks</button>
+  </div>
 </div>
 
-<br><br>
-
-<h4 class="bc-content">Chain Blocks
-  <button type="button" class="btn btn-primary btn-raised bc-content bc-btn" (click)="getChainBlocks()">Search for Chain Blocks</button>
-</h4>
-
-<br>
-<div class="vertical-scroll bc-content">
-  <table class="table table-striped bc-table">
-    <thead>
-    <tr>
-      <th class="table-id">#</th>
-      <th></th>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Birthday</th>
-    </tr>
-    </thead>
-    <!--<tbody>-->
-    <!--<tr>-->
-    <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
-    <!--<td></td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
-  </table>
+<div class="bc-box col-md-12">
+  <h3 class="bc-content bc-header">Chain Blocks</h3>
+  <div id="chainblocks-1">
+    <div *ngFor="let item of chainBlockData">
+      <p class="bc-content"><strong>Id:</strong> {{ item.id }}</p>
+      <p class="bc-content"><strong>DM-Version:</strong> {{ item.dmVersion }}</p>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="button-wrapper">
+    <button type="button" id="chain1Button" class="btn btn-primary btn-raised" (click)="showCB()">Show Chain Blocks</button>
+  </div>
 </div>
 
-<br><br>
-
-<h4 class="bc-content">IBD Blocks
-  <button type="button" class="btn btn-primary btn-raised bc-content bc-btn" (click)="getIbdBlocks()">Search for IBD Blocks</button>
-</h4>
-
-<br>
-<div class="vertical-scroll bc-content">
-  <table class="table table-striped bc-table">
-    <thead>
-    <tr>
-      <th class="table-id">#</th>
-      <th></th>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Birthday</th>
-    </tr>
-    </thead>
-    <!--<tbody>-->
-    <!--<tr>-->
-    <!--<td class="table-id">{{agentOwnerData.agentOwnerId}}</td>-->
-    <!--<td></td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.lastName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.firstName}}</td>-->
-    <!--<td>{{agentOwnerData.agentOwnerBody.birthday}}</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
-  </table>
+<div class="bc-box col-md-12">
+  <h3 class="bc-content bc-header">Chain Blocks</h3>
+  <div id="ibdblocks-1">
+    <div *ngFor="let item of ibdBlockData">
+      <p class="bc-content"><strong>Id:</strong> {{ item.id }}</p>
+      <p class="bc-content"><strong>DM-Version:</strong> {{ item.dmVersion }}</p>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="button-wrapper">
+    <button type="button" id="ibd1Button" class="btn btn-primary btn-raised" (click)="showIB()">Show IBD Blocks</button>
+  </div>
 </div>

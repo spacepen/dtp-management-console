@@ -3,11 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="cb1bee8b-d694-4044-bcc5-9f35cad38f7e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.component.ts" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.html" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.scss" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.service.ts" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.service.ts" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.service.ts" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.component.ts" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.html" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.scss" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.scss" afterPath="$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.scss" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,33 +35,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="activities.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.html">
+      <file leaf-file-name="bcrawdata.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2211">
               <caret line="67" column="101" lean-forward="false" selection-start-line="67" selection-start-column="101" selection-end-line="67" selection-end-column="101" />
+=======
+            <state relative-caret-position="255">
+              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activities.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.service.ts">
+      <file leaf-file-name="bcrawdata.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.component.ts">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="320">
               <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+=======
+            <state relative-caret-position="285">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="37" selection-end-column="3" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
               <folding>
-                <element signature="e#43#84#0" expanded="true" />
+                <element signature="e#0#52#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="activities.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
               <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+=======
+      <file leaf-file-name="status.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bcrawdata.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
               <folding />
             </state>
           </provider>
@@ -98,9 +133,6 @@
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/users/users.scss" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/users/users.service.ts" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.service.ts" />
-        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.component.ts" />
-        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.scss" />
-        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.html" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.service.ts" />
         <option value="$PROJECT_DIR$/ng2-admin/.gitignore" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/dashboard/lineChart/lineChart.html" />
@@ -113,12 +145,12 @@
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/charts/components/chartistJs/chartistJs.html" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.component.ts" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.component.ts" />
-        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.scss" />
-        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.scss" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.component.ts" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/users/users.component.ts" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.html" />
+        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.scss" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/users/users.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/pages.menu.ts" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/pages.routing.ts" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.service.ts" />
@@ -127,6 +159,12 @@
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.html" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.html" />
         <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.component.ts" />
+=======
+        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.scss" />
+        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.scss" />
+        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.component.ts" />
+        <option value="$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.html" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
       </list>
     </option>
   </component>
@@ -161,6 +199,10 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,6 +321,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtp-management-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtp-management-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng2-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="activities" />
+=======
               <option name="myItemId" value="status" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -309,13 +384,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activities" />
+              <option name="myItemId" value="layerconfigs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtp-management-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtp-management-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng2-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bcrawdata" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -424,15 +533,20 @@
       <workItem from="1518609126126" duration="11740000" />
       <workItem from="1518606593648" duration="712000" />
       <workItem from="1518608901188" duration="7707000" />
+<<<<<<< HEAD
       <workItem from="1518630666360" duration="632000" />
       <workItem from="1518681518480" duration="10579000" />
       <workItem from="1518711853773" duration="3431000" />
       <workItem from="1518733856197" duration="505000" />
       <workItem from="1518734551740" duration="6012000" />
+=======
+      <workItem from="1518713595145" duration="9155000" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="138088000" />
   </component>
   <component name="TodoView">
@@ -447,6 +561,13 @@
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1850" extended-state="6" />
     <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="126084000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="4" y="22" width="1276" height="778" extended-state="1" />
+    <editor active="false" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -499,6 +620,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/dashboard/lineChart/lineChart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -507,6 +629,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
     <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -655,8 +779,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.scss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+=======
+        <state relative-caret-position="975">
+          <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+          <folding />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
         </state>
       </provider>
     </entry>
@@ -669,8 +799,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1122">
           <caret line="100" column="42" lean-forward="false" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
+=======
+        <state relative-caret-position="735">
+          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#84#0" expanded="false" />
+          </folding>
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
         </state>
       </provider>
     </entry>
@@ -683,8 +821,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.scss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="375">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+=======
+        <state relative-caret-position="2370">
+          <caret line="160" column="12" lean-forward="false" selection-start-line="160" selection-start-column="12" selection-end-line="161" selection-end-column="111" />
+          <folding>
+            <element signature="e#43#100#0" expanded="false" />
+          </folding>
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
         </state>
       </provider>
     </entry>
@@ -699,6 +845,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -755,33 +902,133 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="37" column="2" lean-forward="true" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
+=======
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+        <state relative-caret-position="1122">
+          <caret line="100" column="42" lean-forward="false" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/docs/contents/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="127" column="21" lean-forward="false" selection-start-line="127" selection-start-column="15" selection-end-line="127" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#55#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/users/users.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="24" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/users/users.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/users/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="825">
+          <caret line="37" column="2" lean-forward="true" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="20" />
+=======
+        <state relative-caret-position="405">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="95" column="59" lean-forward="false" selection-start-line="95" selection-start-column="59" selection-end-line="95" selection-end-column="59" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+=======
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="47" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/layerconfigs/layerconfigs.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/status/status.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="37" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -796,14 +1043,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2211">
           <caret line="67" column="101" lean-forward="false" selection-start-line="67" selection-start-column="101" selection-end-line="67" selection-end-column="101" />
+=======
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/activities/activities.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+=======
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="37" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng2-admin/src/app/pages/bcrawdata/bcrawdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+>>>>>>> 23893794d9a5f6c172091ae21b7e9acec3cdfb91
           <folding />
         </state>
       </provider>
