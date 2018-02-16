@@ -2,19 +2,14 @@
  * Created by tomda on 07.02.2018.
  */
 import {Injectable} from "@angular/core";
-import {BaThemeConfigProvider, colorHelper, layoutPaths} from '../../theme';
 import {Http} from "@angular/http";
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ActivitiesService{
 
-  lineDate: any;
-  lineValue: any;
-  lineValue0: any;
 
-
-  constructor(private _http: Http, private _baConfig:BaThemeConfigProvider){}
+  constructor(private _http: Http){}
 
 
   getTrafficData(){

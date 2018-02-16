@@ -26,6 +26,8 @@ export class StatusService{
   }
 
   getMetadata(){
+
     return this._http.get('http://localhost:8080/dtp/mc/nodewatch/metadata').map(res => res.json());
+
   }
 }
