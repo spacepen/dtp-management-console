@@ -31,14 +31,6 @@ export class StatusComponent implements AfterViewInit {
 
  constructor(private _httpService:StatusService){}
 
- /*onTestPost(){
-    this._httpService.postTest()
-      .subscribe(
-      data => this.postData = JSON.stringify(data),
-      error => alert(error),
-      () => console.log("Finished")
-      );
- }*/
 
   ngAfterViewInit(){
     this.onTestGet1();
@@ -46,16 +38,17 @@ export class StatusComponent implements AfterViewInit {
     this.getInfoData();
     this.getGenesisBlock();
   }
+  
 
   showAO(){
     let div = document.getElementById("agent-owner");
     let button = document.getElementById("agentOButton");
-    if (div.style.display == 'none'){
-      button.textContent = "Hide Initializer-Agent Owner";
-      div.style.display = 'block';
-    } else {
+    if (div.style.display === 'block'){
       button.textContent = "Show Initializer-Agent Owner";
       div.style.display = 'none';
+    } else {
+      button.textContent = "Hide Initializer-Agent Owner";
+      div.style.display = 'block';
     }
   }
 
