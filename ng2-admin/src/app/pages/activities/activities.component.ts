@@ -1,6 +1,3 @@
-/**
- * Created by tomda on 28.01.2018.
- */
 import { Component, AfterViewInit } from '@angular/core';
 import { ActivitiesService } from './activities.service';
 import {BaThemeConfigProvider, colorHelper} from '../../theme';
@@ -128,17 +125,25 @@ export class ActivitiesComponent implements AfterViewInit {
     this.getLineDataQueue();
     this.getLineDataChain();
     this.getLineDataVotes();
+    this.getLineDataIbd();
+    this.getLineDataRemovedTrans();
+    this.getLineDataRemovedQueue();
     this.makeGraph();
     this.makeGraph1();
     this.makeGraph2();
     this.makeGraph3();
+    this.makeGraph4();
+    this.makeGraph5();
+    this.makeGraph6();
     this.getCurrentTimestamp();
   }
 
   ngAfterViewInit() {
-    //this.initChart();
+
   }
 
+
+  //Activities Counter
   getActivitiesCount() {
     this._httpService.getTrafficData()
       .subscribe(
@@ -155,6 +160,8 @@ export class ActivitiesComponent implements AfterViewInit {
       )
   }
 
+
+  //Current Timestamp (to Date)
   getCurrentTimestamp(){
     this.currentTime = new Date().getTime();
     this.lastUpdate = this.currentTime*1000;
@@ -186,10 +193,9 @@ export class ActivitiesComponent implements AfterViewInit {
             this.transEntitieArray.push((this.entity.length + i) - this.entity.length);
 
             if (timestamp[i] == this.currentTime){
+
               this.timestampValue1 = timestamp[i];
 
-              console.log(this.dates[i]);
-              this.makeGraph();
             }
 
             this.timestampValue2 = timestamp[(i+10)];
@@ -215,7 +221,7 @@ export class ActivitiesComponent implements AfterViewInit {
         simpleLineOptions: {
           color: this._baConfig.get().colors.defaultText,
           fullWidth: true,
-          height: '300px',
+          height: '350px',
           chartPadding: {
             right: 40
           }
@@ -252,9 +258,9 @@ export class ActivitiesComponent implements AfterViewInit {
             this.transEntitieArray2.push((this.entity.length + i) - this.entity.length);
 
             if (timestamp[i] == this.currentTime){
+
               this.timestampValue21 = timestamp[i];
 
-              this.makeGraph2();
             }
             this.timestampValue22 = timestamp[(i+10)];
             this.timestampValue23 = timestamp[(i+20)];
@@ -280,7 +286,7 @@ export class ActivitiesComponent implements AfterViewInit {
       simpleLineOptions: {
         color: this._baConfig.get().colors.defaultText,
         fullWidth: true,
-        height: '300px',
+        height: '200px',
         chartPadding: {
           right: 40
         }
@@ -313,25 +319,24 @@ export class ActivitiesComponent implements AfterViewInit {
           this.getCurrentTimestamp();
 
           for (var i = 0; i <= timeLength; i++){
-            //console.log(this.entity.length);
 
             this.transEntitieArray1.push((this.entity.length + i) - this.entity.length);
 
             if (timestamp[i] == this.currentTime){
+
               this.timestampValue11 = timestamp[i];
 
-              this.makeGraph1();
             }
-            this.timestampValue12 = timestamp[(i+10)];
-            this.timestampValue13 = timestamp[(i+20)];
-            this.timestampValue14 = timestamp[(i+30)];
-            this.timestampValue15 = timestamp[(i+40)];
+            this.timestampValue12 = timestamp[i+10];
+            this.timestampValue13 = timestamp[i+20];
+            this.timestampValue14 = timestamp[i+30];
+            this.timestampValue15 = timestamp[i+40];
 
             this.value11 = this.transEntitieArray1[i];
-            this.value12 = this.transEntitieArray1[(i+10)];
-            this.value13 = this.transEntitieArray1[(i+20)];
-            this.value14 = this.transEntitieArray1[(i+30)];
-            this.value15 = this.transEntitieArray1[(i+40)];
+            this.value12 = this.transEntitieArray1[i+10];
+            this.value13 = this.transEntitieArray1[i+20];
+            this.value14 = this.transEntitieArray1[i+30];
+            this.value15 = this.transEntitieArray1[i+40];
 
             this.makeGraph1();
 
@@ -346,7 +351,7 @@ export class ActivitiesComponent implements AfterViewInit {
       simpleLineOptions: {
         color: this._baConfig.get().colors.defaultText,
         fullWidth: true,
-        height: '300px',
+        height: '200px',
         chartPadding: {
           right: 40
         }
@@ -383,20 +388,20 @@ export class ActivitiesComponent implements AfterViewInit {
             this.transEntitieArray3.push((this.entity.length + i) - this.entity.length);
 
             if (timestamp[i] == this.currentTime){
+
               this.timestampValue31 = timestamp[i];
 
-              this.makeGraph3();
             }
-            this.timestampValue32 = timestamp[(i+10)];
-            this.timestampValue33 = timestamp[(i+20)];
-            this.timestampValue34 = timestamp[(i+30)];
-            this.timestampValue35 = timestamp[(i+40)];
+            this.timestampValue32 = timestamp[i+10];
+            this.timestampValue33 = timestamp[i+20];
+            this.timestampValue34 = timestamp[i+30];
+            this.timestampValue35 = timestamp[i+40];
 
             this.value31 = this.transEntitieArray3[i];
-            this.value32 = this.transEntitieArray3[(i+10)];
-            this.value33 = this.transEntitieArray3[(i+20)];
-            this.value34 = this.transEntitieArray3[(i+30)];
-            this.value35 = this.transEntitieArray3[(i+40)];
+            this.value32 = this.transEntitieArray3[i+10];
+            this.value33 = this.transEntitieArray3[i+20];
+            this.value34 = this.transEntitieArray3[i+30];
+            this.value35 = this.transEntitieArray3[i+40];
 
             this.makeGraph3();
 
@@ -411,7 +416,7 @@ export class ActivitiesComponent implements AfterViewInit {
       simpleLineOptions: {
         color: this._baConfig.get().colors.defaultText,
         fullWidth: true,
-        height: '300px',
+        height: '200px',
         chartPadding: {
           right: 40
         }
@@ -421,6 +426,201 @@ export class ActivitiesComponent implements AfterViewInit {
           this.timestampValue34, this.timestampValue35 ],
         series: [
           [this.value31, this.value32, this.value33, this.value34, this.value35]
+        ]
+      }
+    };
+  }
+
+
+  //New Ibd Blocks
+  getLineDataIbd(){
+    this._httpService.getTrafficData()
+      .subscribe(
+        res => {
+          let timestamp = res['newIbdBlocks'].map(res => res.timestamp);
+          this.entity = res['newIbdBlocks'].map(res => res.entities);
+          let timeLength = timestamp['length'];
+
+          timestamp.forEach((res) => {
+            let jsdate = new Date(res);
+            this.dates4.push(jsdate.toLocaleTimeString('en', {year: 'numeric', month: 'short', day: 'numeric'}))
+          });
+
+          this.getCurrentTimestamp();
+
+          for (var i = 0; i <= timeLength; i++){
+
+            this.transEntitieArray4.push((this.entity.length + i) - this.entity.length);
+
+            if (timestamp[i] == this.currentTime){
+
+              this.timestampValue41 = timestamp[i];
+
+            }
+            this.timestampValue42 = timestamp[i+10];
+            this.timestampValue43 = timestamp[i+20];
+            this.timestampValue44 = timestamp[i+30];
+            this.timestampValue45 = timestamp[i+40];
+
+            this.value41 = this.transEntitieArray4[i];
+            this.value42 = this.transEntitieArray4[i+10];
+            this.value43 = this.transEntitieArray4[i+20];
+            this.value44 = this.transEntitieArray4[i+30];
+            this.value45 = this.transEntitieArray4[i+40];
+
+            this.makeGraph4();
+
+          }
+
+        });
+  }
+
+  makeGraph4() {
+
+    this.lineData4 = {
+      simpleLineOptions: {
+        color: this._baConfig.get().colors.defaultText,
+        fullWidth: true,
+        height: '200px',
+        chartPadding: {
+          right: 40
+        }
+      },
+      simpleLineData: {
+        labels: [ this.timestampValue41, this.timestampValue42, this.timestampValue43,
+          this.timestampValue44, this.timestampValue45 ],
+        series: [
+          [this.value41, this.value42, this.value43, this.value44, this.value45]
+        ]
+      }
+    };
+  }
+
+
+  //Removed Pool Transactions
+  getLineDataRemovedTrans(){
+    this._httpService.getTrafficData()
+      .subscribe(
+        res => {
+          let timestamp = res['removedPoolTransactions'].map(res => res.timestamp);
+          this.entity = res['removedPoolTransactions'].map(res => res.entities);
+          let timeLength = timestamp['length'];
+
+          timestamp.forEach((res) => {
+            let jsdate = new Date(res);
+            this.dates5.push(jsdate.toLocaleTimeString('en', {year: 'numeric', month: 'short', day: 'numeric'}))
+          });
+
+          this.getCurrentTimestamp();
+
+          for (var i = 0; i <= timeLength; i++){
+
+            this.transEntitieArray5.push((this.entity.length + i) - this.entity.length);
+
+            if (timestamp[i] == this.currentTime){
+
+              this.timestampValue51 = timestamp[i];
+
+            }
+            this.timestampValue52 = timestamp[i+10];
+            this.timestampValue53 = timestamp[i+20];
+            this.timestampValue54 = timestamp[i+30];
+            this.timestampValue55 = timestamp[i+40];
+
+            this.value51 = this.transEntitieArray5[i];
+            this.value52 = this.transEntitieArray5[i+10];
+            this.value53 = this.transEntitieArray5[i+20];
+            this.value54 = this.transEntitieArray5[i+30];
+            this.value55 = this.transEntitieArray5[i+40];
+
+            this.makeGraph5();
+
+          }
+
+        });
+  }
+
+  makeGraph5() {
+
+    this.lineData5 = {
+      simpleLineOptions: {
+        color: this._baConfig.get().colors.defaultText,
+        fullWidth: true,
+        height: '200px',
+        chartPadding: {
+          right: 40
+        }
+      },
+      simpleLineData: {
+        labels: [ this.timestampValue51, this.timestampValue52, this.timestampValue53,
+          this.timestampValue54, this.timestampValue55 ],
+        series: [
+          [this.value51, this.value52, this.value53, this.value54, this.value55]
+        ]
+      }
+    };
+  }
+
+
+  //Removed Queue Blocks
+  getLineDataRemovedQueue(){
+    this._httpService.getTrafficData()
+      .subscribe(
+        res => {
+          let timestamp = res['removedQueueBlocks'].map(res => res.timestamp);
+          this.entity = res['removedQueueBlocks'].map(res => res.entities);
+          let timeLength = timestamp['length'];
+
+          timestamp.forEach((res) => {
+            let jsdate = new Date(res);
+            this.dates6.push(jsdate.toLocaleTimeString('en', {year: 'numeric', month: 'short', day: 'numeric'}))
+          });
+
+          this.getCurrentTimestamp();
+
+          for (var i = 0; i <= timeLength; i++){
+
+            this.transEntitieArray6.push((this.entity.length + i) - this.entity.length);
+
+            if (timestamp[i] == this.currentTime){
+
+              this.timestampValue61 = timestamp[i];
+
+            }
+            this.timestampValue62 = timestamp[i+10];
+            this.timestampValue63 = timestamp[i+20];
+            this.timestampValue64 = timestamp[i+30];
+            this.timestampValue65 = timestamp[i+40];
+
+            this.value61 = this.transEntitieArray6[i];
+            this.value62 = this.transEntitieArray6[i+10];
+            this.value63 = this.transEntitieArray6[i+20];
+            this.value64 = this.transEntitieArray6[i+30];
+            this.value65 = this.transEntitieArray6[i+40];
+
+            this.makeGraph6();
+
+          }
+
+        });
+  }
+
+  makeGraph6() {
+
+    this.lineData6 = {
+      simpleLineOptions: {
+        color: this._baConfig.get().colors.defaultText,
+        fullWidth: true,
+        height: '200px',
+        chartPadding: {
+          right: 40
+        }
+      },
+      simpleLineData: {
+        labels: [ this.timestampValue61, this.timestampValue62, this.timestampValue63,
+          this.timestampValue64, this.timestampValue65 ],
+        series: [
+          [this.value61, this.value62, this.value63, this.value64, this.value65]
         ]
       }
     };

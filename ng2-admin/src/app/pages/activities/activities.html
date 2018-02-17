@@ -1,5 +1,11 @@
 <h2 class="activities-content">Here you can see the Activities of the DTP</h2>
 
+<div class="outer col-md-12">
+  <div class="col-sm-4 col-6 update">
+    <button id="update-button" type="button" class="btn btn-primary btn-lg update-button" (click)="ngOnInit()">UPDATE</button>
+  </div>
+</div>
+
 <br><br>
 <br><br>
 
@@ -55,29 +61,20 @@
         </div>
       </div>
     </div>
-    <br>
-    <div class="button-wrapper">
-      <button type="button" class="btn btn-primary btn-raised" (click)="getActivitiesCount()">Update</button>
-    </div>
   </div>
 
   <div class="col-md-1"></div>
 
   <section class="chartist col-md-5 graphs">
-    <div class="button-wrapper">
-      <button id="update-button" type="button" class="btn btn-primary btn-raised" (click)="ngOnInit()">Update Graphs</button>
-    </div>
-    <br>
     <div class="row">
       <div>
         <ba-card cardTitle="New Pool Transactions" baCardClass="with-scroll">
-          <h5>New Pool Transactions of an Timeinterval: last Updated {{ currentDate }}</h5>
+          <h5>Timeinterval last Updated: {{ currentDate }}</h5>
           <ba-chartist-chart baChartistChartClass="ct-chart"
                              baChartistChartType="Line"
                              [baChartistChartData]="lineData['simpleLineData']"
                              [baChartistChartOptions]="lineData['simpleLineOptions']">
           </ba-chartist-chart>
-
         </ba-card>
       </div>
     </div>
@@ -89,11 +86,11 @@
 
 <div class="row">
 
-  <section class="chartist col-md-3 graphs">
+  <section class="chartist col-md-4 graphs graph1">
     <div class="row">
       <div>
         <ba-card cardTitle="New Queue Blocks" baCardClass="with-scroll">
-          <h5>New Queue Blocks of an Timeinterval: last Updated {{ currentDate }}</h5>
+          <h5>Timeinterval last Updated: {{ currentDate }}</h5>
           <ba-chartist-chart baChartistChartClass="ct-chart"
                              baChartistChartType="Line"
                              [baChartistChartData]="lineData1['simpleLineData']"
@@ -105,13 +102,11 @@
     </div>
   </section>
 
-  <div class="col-md-1"></div>
-
-  <section class="chartist col-md-3 graphs">
+  <section class="chartist col-md-4 graphs">
     <div class="row">
       <div>
         <ba-card cardTitle="New Chain Blocks" baCardClass="with-scroll">
-          <h5>New Chain Blocks of an Timeinterval: last Updated {{ currentDate }}</h5>
+          <h5>Timeinterval last Updated: {{ currentDate }}</h5>
           <ba-chartist-chart baChartistChartClass="ct-chart"
                              baChartistChartType="Line"
                              [baChartistChartData]="lineData2['simpleLineData']"
@@ -123,17 +118,67 @@
     </div>
   </section>
 
-  <div class="col-md-1"></div>
-
-  <section class="chartist col-md-3 graphs">
+  <section class="chartist col-md-4 graphs">
     <div class="row">
       <div>
         <ba-card cardTitle="New Votes" baCardClass="with-scroll">
-          <h5>New Votes of an Timeinterval: last Updated {{ currentDate }}</h5>
+          <h5>Timeinterval last Updated: {{ currentDate }}</h5>
           <ba-chartist-chart baChartistChartClass="ct-chart"
                              baChartistChartType="Line"
                              [baChartistChartData]="lineData3['simpleLineData']"
                              [baChartistChartOptions]="lineData3['simpleLineOptions']">
+          </ba-chartist-chart>
+
+        </ba-card>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="row">
+
+  <section class="chartist col-md-4 graphs">
+    <div class="row">
+      <div>
+        <ba-card cardTitle="New Ibd Blocks" baCardClass="with-scroll">
+          <h5>Timeinterval last Updated: {{ currentDate }}</h5>
+          <ba-chartist-chart baChartistChartClass="ct-chart"
+                             baChartistChartType="Line"
+                             [baChartistChartData]="lineData4['simpleLineData']"
+                             [baChartistChartOptions]="lineData4['simpleLineOptions']">
+          </ba-chartist-chart>
+
+        </ba-card>
+      </div>
+    </div>
+  </section>
+
+  <section class="chartist col-md-4 graphs">
+    <div class="row">
+      <div>
+        <ba-card cardTitle="Removed Pool Transactions" baCardClass="with-scroll">
+          <h5>Timeinterval last Updated: {{ currentDate }}</h5>
+          <ba-chartist-chart baChartistChartClass="ct-chart"
+                             baChartistChartType="Line"
+                             [baChartistChartData]="lineData5['simpleLineData']"
+                             [baChartistChartOptions]="lineData5['simpleLineOptions']">
+          </ba-chartist-chart>
+
+        </ba-card>
+      </div>
+    </div>
+  </section>
+
+  <section class="chartist col-md-4 graphs">
+    <div class="row">
+      <div>
+        <ba-card cardTitle="Removed Queue Blocks" baCardClass="with-scroll">
+          <h5>Timeinterval last Updated: {{ currentDate }}</h5>
+          <ba-chartist-chart baChartistChartClass="ct-chart"
+                             baChartistChartType="Line"
+                             [baChartistChartData]="lineData6['simpleLineData']"
+                             [baChartistChartOptions]="lineData6['simpleLineOptions']">
           </ba-chartist-chart>
 
         </ba-card>

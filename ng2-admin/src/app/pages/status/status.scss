@@ -4,6 +4,10 @@
   color: black;
 }
 
+.row{
+  padding-left: 10px;
+}
+
 #agent-owner{
   display: none;
   border-color: $primary-light thick;
@@ -11,14 +15,15 @@
 
 .blockchain-data{
   position: relative;
-  background-color: $bootstrap-panel-bg;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 50px;
-  border-radius: 5px;
-  border-color: rgb(100, 100, 100);
-  box-shadow: 5px 5px 3px rgba(150, 150, 150, 0.2);
   margin-bottom: 10px;
+  color: $content-text;
+  background-color: $bootstrap-panel-bg;
+  border: 0;
+  border-radius: $bootstrap-panel-radius;
+  box-shadow: $bootstrap-panel-shadow;
 
   .nodeMeta-header{
     padding-bottom: 10px;
@@ -27,15 +32,16 @@
 
 .nodeMeta{
   position: relative;
-  background-color: $bootstrap-panel-bg;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 50px;
-  border-radius: 5px;
-  border-color: rgb(100, 100, 100);
-  box-shadow: 5px 5px 3px rgba(150, 150, 150, 0.2);
   margin-bottom: 10px;
   margin-left: 10px;
+  color: $content-text;
+  background-color: $bootstrap-panel-bg;
+  border: 0;
+  border-radius: $bootstrap-panel-radius;
+  box-shadow: $bootstrap-panel-shadow;
 
   .nodeMeta-header{
     padding-bottom: 10px;
@@ -43,17 +49,16 @@
 }
 
 :host /deep/ .channels-block {
-  //float: right;
-  //width: 100%;
   position: relative;
-  background-color: $bootstrap-panel-bg;
   padding-bottom: 10px;
   padding-top: 10px;
-  border-radius: 5px;
-  border-color: rgb(100, 100, 100);
-  box-shadow: 5px 5px 3px rgba(150, 150, 150, 0.2);
   margin-bottom: 10px;
   margin-left: 10px;
+  color: $content-text;
+  background-color: $bootstrap-panel-bg;
+  border: 0;
+  border-radius: $bootstrap-panel-radius;
+  box-shadow: $bootstrap-panel-shadow;
 
   .channel-header{
     padding-bottom: 10px;
