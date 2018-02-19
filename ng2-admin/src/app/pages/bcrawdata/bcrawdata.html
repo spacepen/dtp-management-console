@@ -8,58 +8,308 @@
 <div class="bc-box col-md-12">
   <h3 class="bc-content bc-header">Pool Transactions</h3>
   <div id="pooltransactions-1">
-    <div *ngFor="let item of poolTransactionData">
-      <p class="bc-content"><strong>Id:</strong> {{ item.id }}</p>
-      <p class="bc-content"><strong>DM-Version:</strong> {{ item.dmVersion }}</p>
-      <br>
-      <br>
+    <h4 class="bc-content">
+      <button type="button" class="btn btn-primary btn-raised bc-content bc-btn" (click)="getPoolTransactions()">Refresh Pool Transactions</button>
+    </h4>
+    <i class="bc-content">Look through current pool transaction data.</i>
+    <br><br><br>
+    <div class="bc-content users-filter">
+      <div colspan="5">
+        <input class="form-control" placeholder="filter by name"/>
+      </div>
+    </div>
+    <div class="vertical-scroll bc-content table-scale">
+      <table class="table table-striped bc-table">
+        <thead>
+        <tr>
+          <th>Block ID</th>
+          <th>Timestamp</th>
+          <th>Creator Agent</th>
+          <th>Transactions</th>
+          <th>Votes</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <!--<tbody>-->
+        <!--<tr  *ngFor="let item of chainBlockData">-->
+        <!--<td> {{item.id}} </td>-->
+        <!--<td> {{item.blockBody.timestamp}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>-->
+        <!--&lt;!&ndash;<td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td> {{item.votes}} </td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td> {{item.blockBody.comment}} </td>&ndash;&gt;-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      </table>
+    </div>
+    <br>
+    <div class="bc-content users-filter">
+      <div colspan="5">
+        <input class="form-control" placeholder="filter by name"/>
+      </div>
+    </div>
+    <div class="vertical-scroll bc-content table-scale">
+      <table class="table table-striped bc-table">
+        <thead>
+        <tr>
+          <th>STransaction ID</th>
+          <th>Timestamp</th>
+          <th>Creator Pub Key</th>
+          <th>Payload ID</th>
+          <th>Operation</th>
+          <th>cOwner</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <!--<tbody>-->
+        <!--<tr  *ngFor="let item of chainBlockData">-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      </table>
     </div>
   </div>
+  <br>
   <div class="button-wrapper">
     <button type="button" id="pool1Button" class="btn btn-primary btn-raised" (click)="showPT()">Show Pool Transactions</button>
   </div>
 </div>
 
+
+
 <div class="bc-box col-md-12">
-  <h3 class="bc-content bc-header">Pool Transactions</h3>
+  <h3 class="bc-content bc-header">Queue Blocks</h3>
   <div id="queueblocks-1">
-    <div *ngFor="let item of queueBlockData">
-      <p class="bc-content"><strong>Id:</strong> {{ item.id }}</p>
-      <p class="bc-content"><strong>DM-Version:</strong> {{ item.dmVersion }}</p>
-      <br>
-      <br>
+    <h4 class="bc-content">
+      <button type="button" class="btn btn-primary btn-raised bc-content bc-btn" (click)="getQueueBlocks()">Refresh Queue Blocks</button>
+    </h4>
+    <i class="bc-content">Look through current queue block data.</i>
+    <br><br><br>
+    <div class="bc-content users-filter">
+      <div colspan="5">
+        <input class="form-control" placeholder="filter by name"/>
+      </div>
+    </div>
+    <div class="vertical-scroll bc-content table-scale">
+      <table class="table table-striped bc-table">
+        <thead>
+        <tr>
+          <th>Block ID</th>
+          <th>Timestamp</th>
+          <th>Creator Agent</th>
+          <th>Transactions</th>
+          <th>Votes</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <!--<tbody>-->
+        <!--<tr  *ngFor="let item of chainBlockData">-->
+        <!--<td> {{item.id}} </td>-->
+        <!--<td> {{item.blockBody.timestamp}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>-->
+        <!--&lt;!&ndash;<td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td> {{item.votes}} </td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td> {{item.blockBody.comment}} </td>&ndash;&gt;-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      </table>
+    </div>
+    <br>
+    <div class="bc-content users-filter">
+      <div colspan="5">
+        <input class="form-control" placeholder="filter by name"/>
+      </div>
+    </div>
+    <div class="vertical-scroll bc-content table-scale">
+      <table class="table table-striped bc-table">
+        <thead>
+        <tr>
+          <th>STransaction ID</th>
+          <th>Timestamp</th>
+          <th>Creator Pub Key</th>
+          <th>Payload ID</th>
+          <th>Operation</th>
+          <th>cOwner</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <!--<tbody>-->
+        <!--<tr  *ngFor="let item of chainBlockData">-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      </table>
     </div>
   </div>
+  <br>
   <div class="button-wrapper">
     <button type="button" id="queue1Button" class="btn btn-primary btn-raised" (click)="showQB()">Show Queue Blocks</button>
   </div>
 </div>
 
+
+
 <div class="bc-box col-md-12">
   <h3 class="bc-content bc-header">Chain Blocks</h3>
   <div id="chainblocks-1">
-    <div *ngFor="let item of chainBlockData">
-      <p class="bc-content"><strong>Id:</strong> {{ item.id }}</p>
-      <p class="bc-content"><strong>DM-Version:</strong> {{ item.dmVersion }}</p>
-      <br>
-      <br>
+    <h4 class="bc-content">
+      <button type="button" class="btn btn-primary btn-raised bc-content bc-btn" (click)="getChainBlocks()">Refresh Chain Blocks</button>
+    </h4>
+    <i class="bc-content">Look through current chain block data.</i>
+    <br><br><br>
+    <div class="bc-content users-filter">
+      <div colspan="5">
+        <input class="form-control" placeholder="filter by name"/>
+      </div>
+    </div>
+    <div class="vertical-scroll bc-content table-scale">
+      <table class="table table-striped bc-table">
+        <thead>
+        <tr>
+          <th>Block ID</th>
+          <th>Timestamp</th>
+          <th>Creator Agent</th>
+          <th>Transactions</th>
+          <th>Votes</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <!--<tbody>-->
+        <!--<tr  *ngFor="let item of chainBlockData">-->
+          <!--<td> {{item.id}} </td>-->
+          <!--<td> {{item.blockBody.timestamp}} </td>-->
+          <!--<td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>-->
+          <!--&lt;!&ndash;<td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>&ndash;&gt;-->
+          <!--&lt;!&ndash;<td> {{item.votes}} </td>&ndash;&gt;-->
+          <!--&lt;!&ndash;<td> {{item.blockBody.comment}} </td>&ndash;&gt;-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      </table>
+    </div>
+    <br>
+    <div class="bc-content users-filter">
+      <div colspan="5">
+        <input class="form-control" placeholder="filter by name"/>
+      </div>
+    </div>
+    <div class="vertical-scroll bc-content table-scale">
+      <table class="table table-striped bc-table">
+        <thead>
+        <tr>
+          <th>STransaction ID</th>
+          <th>Timestamp</th>
+          <th>Creator Pub Key</th>
+          <th>Payload ID</th>
+          <th>Operation</th>
+          <th>cOwner</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <!--<tbody>-->
+        <!--<tr  *ngFor="let item of chainBlockData">-->
+          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>-->
+          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>-->
+          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>-->
+          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>-->
+          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>-->
+          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>-->
+          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      </table>
     </div>
   </div>
+  <br>
   <div class="button-wrapper">
     <button type="button" id="chain1Button" class="btn btn-primary btn-raised" (click)="showCB()">Show Chain Blocks</button>
   </div>
 </div>
 
+
+
 <div class="bc-box col-md-12">
-  <h3 class="bc-content bc-header">Chain Blocks</h3>
+  <h3 class="bc-content bc-header">IBD Blocks</h3>
   <div id="ibdblocks-1">
-    <div *ngFor="let item of ibdBlockData">
-      <p class="bc-content"><strong>Id:</strong> {{ item.id }}</p>
-      <p class="bc-content"><strong>DM-Version:</strong> {{ item.dmVersion }}</p>
-      <br>
-      <br>
+    <h4 class="bc-content">
+      <button type="button" class="btn btn-primary btn-raised bc-content bc-btn" (click)="getIbdBlocks()">Refresh IBD Blocks</button>
+    </h4>
+    <i class="bc-content">Look through current IBD block data.</i>
+    <br><br><br>
+    <div class="bc-content users-filter">
+      <div colspan="5">
+        <input class="form-control" placeholder="filter by name"/>
+      </div>
+    </div>
+    <div class="vertical-scroll bc-content table-scale">
+      <table class="table table-striped bc-table">
+        <thead>
+        <tr>
+          <th>Block ID</th>
+          <th>Timestamp</th>
+          <th>Creator Agent</th>
+          <th>Transactions</th>
+          <th>Votes</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <!--<tbody>-->
+        <!--<tr  *ngFor="let item of chainBlockData">-->
+        <!--<td> {{item.id}} </td>-->
+        <!--<td> {{item.blockBody.timestamp}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>-->
+        <!--&lt;!&ndash;<td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td> {{item.votes}} </td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td> {{item.blockBody.comment}} </td>&ndash;&gt;-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      </table>
+    </div>
+    <br>
+    <div class="bc-content users-filter">
+      <div colspan="5">
+        <input class="form-control" placeholder="filter by name"/>
+      </div>
+    </div>
+    <div class="vertical-scroll bc-content table-scale">
+      <table class="table table-striped bc-table">
+        <thead>
+        <tr>
+          <th>STransaction ID</th>
+          <th>Timestamp</th>
+          <th>Creator Pub Key</th>
+          <th>Payload ID</th>
+          <th>Operation</th>
+          <th>cOwner</th>
+          <th>Comment</th>
+        </tr>
+        </thead>
+        <!--<tbody>-->
+        <!--<tr  *ngFor="let item of chainBlockData">-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>-->
+        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      </table>
     </div>
   </div>
+  <br>
   <div class="button-wrapper">
     <button type="button" id="ibd1Button" class="btn btn-primary btn-raised" (click)="showIB()">Show IBD Blocks</button>
   </div>

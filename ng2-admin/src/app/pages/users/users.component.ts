@@ -17,6 +17,20 @@ export class UsersComponent {
   agentData: any;
   agentOwnerData: any;
 
+  agentOwnerAddress: any;
+
+  filterQuery = "";
+  rowsOnPage = 10;
+  sortBye = "email";
+  sortOrder = "asc";
+
+  toInt(num: string) {
+    return +num;
+  }
+  sortByWordLength = (a: any) => {
+    return a.city.length;
+  }
+
 
   // showing data of methods below after loading the page
   ngAfterViewInit(){
@@ -54,6 +68,15 @@ export class UsersComponent {
       );
   }
 
+
+  getAgentOwnerAddress(){
+    this._httpService.getUserData()
+      .subscribe(
+        data => this.agentOwnerAddress = data.agentOwners.agentOwnerBody.address,
+        error => alert(error),
+        () => console.log(this.agentOwnerAddress)
+      );
+  }
 
 
 
