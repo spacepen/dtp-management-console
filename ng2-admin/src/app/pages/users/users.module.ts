@@ -4,15 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { UsersComponent } from './users.component';
 import { routing } from './users.routing';
+import {DataTableModule} from "angular2-datatable";
+import {UsersFilterPipe} from "./users-filter.pipe";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    routing
+    routing,
+    DataTableModule
   ],
   declarations: [
-    UsersComponent
+    UsersComponent,
+    UsersFilterPipe
   ]
 })
 export class UsersModule {}

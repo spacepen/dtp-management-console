@@ -4,7 +4,24 @@
 .users-table{
   background-color: #d4d4d4;
 }
+.users-filter{
+  border-radius: 5px;
+  background-color: #d4d4d4;
+}
 .users-btn{
   float: right;
   color: white;
+}
+.table-scale{
+  height: 100%;
+  overflow: auto;
+}
+@import '../../theme/sass/conf/conf';
+:host /deep/ .widgets {
+  .data-table-container {
+    width: 100%;
+    .panel-heading {
+      margin-top: 25px;
+    }
+  }
 }

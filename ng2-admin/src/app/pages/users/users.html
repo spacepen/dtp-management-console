@@ -1,40 +1,139 @@
+<!--<div class="widgets users-content users-table">-->
+  <!--<div class="row">-->
+      <!--<div class="row">-->
+        <!--<div class="col-sm-2">-->
+          <!--<label class="label-control">Rows on page</label>-->
+          <!--<select class="form-control input-sm" [(ngModel)]="rowsOnPage">-->
+            <!--<option [ngValue]="5">5</option>-->
+            <!--<option [ngValue]="10">10</option>-->
+            <!--<option [ngValue]="15">15</option>-->
+          <!--</select>-->
+        <!--</div>-->
+        <!--<div class="col-sm-4">-->
+          <!--<div class="row">-->
+            <!--<label class="col-sm-12 label-control">Sort by</label>-->
+          <!--</div>-->
+          <!--<div class="row">-->
+            <!--<div class="offset-sm-1 col-sm-5">-->
+              <!--<div class="row">-->
+                <!--<select class="form-control input-sm" [(ngModel)]="sortBye">-->
+                  <!--<option ngValue="name">Name</option>-->
+                  <!--<option ngValue="email">Email</option>-->
+                  <!--<option ngValue="age">Address</option>-->
+                <!--</select>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="offset-sm-1 col-sm-5">-->
+              <!--<div class="row">-->
+                <!--<select class="form-control input-sm" [(ngModel)]="sortOrder">-->
+                  <!--<option ngValue="asc">Ascending</option>-->
+                  <!--<option ngValue="desc">Descending</option>-->
+                <!--</select>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="panel panel-default">-->
+        <!--<div class="panel-heading">Agent Owner</div>-->
 
+        <!--<table class="table table-striped" [mfData]="agentOwnerData | usersFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBye" [(mfSortOrder)]="sortOrder">-->
+          <!--<thead>-->
+          <!--<tr>-->
+            <!--<th style="width: 10%"></th>-->
+            <!--<th style="width: 20%">-->
+              <!--<mfDefaultSorter by="name">Name</mfDefaultSorter>-->
+            <!--</th>-->
+            <!--<th style="width: 40%">-->
+              <!--<mfDefaultSorter by="email">Email</mfDefaultSorter>-->
+            <!--</th>-->
+            <!--<th style="width: 10%">-->
+              <!--<mfDefaultSorter by="address">Address</mfDefaultSorter>-->
+            <!--</th>-->
+            <!--<th style="width: 20%">-->
+              <!--<mfDefaultSorter by="birthday">Birthday</mfDefaultSorter>-->
+            <!--</th>-->
+          <!--</tr>-->
+          <!--<tr>-->
+            <!--<th colspan="5">-->
+              <!--Filter by name:-->
+              <!--<input class="form-control" [(ngModel)]="filterQuery" />-->
+            <!--</th>-->
+          <!--</tr>-->
+          <!--</thead>-->
+          <!--<tbody>-->
+          <!--<tr *ngFor="let item of agentOwnerData">-->
+            <!--<td>{{item.agentOwnerBody.firstName}} {{item.agentOwnerBody.lastName}}</td>-->
+            <!--<td>{{item.agentOwnerBody.email}}</td>-->
+            <!--<td class="text-right">{{item.agentOwnerBody.address}}</td>-->
+            <!--<td>{{item.agentOwnerBody.birthday | uppercase}}</td>-->
+          <!--</tr>-->
+          <!--</tbody>-->
+          <!--<tfoot>-->
+          <!--<tr>-->
+            <!--<td colspan="5">-->
+              <!--<mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>-->
+            <!--</td>-->
+          <!--</tr>-->
+          <!--</tfoot>-->
+        <!--</table>-->
+      <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<br><br><br>
 
 
 <h4 class="users-content">Agent Owner
-  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgentOwner()">Search new for Agent Owners</button>
+  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgentOwner()">Update Agent Owner</button>
 </h4>
 <i class="users-content">Look through current agent owners.</i>
 <br><br>
-<div class="vertical-scroll users-content">
-  <table class="table table-striped users-table">
+<div class="users-content users-filter">
+  <div colspan="5">
+    <input class="form-control" placeholder="filter by name" [(ngModel)]="filterQuery" />
+  </div>
+</div>
+<div class="vertical-scroll users-content table-scale">
+  <table class="table table-striped users-table" [mfData]="agentOwnerData | usersFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage">
     <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Address</th>
-      <th>Birthday</th>
+      <th><mfDefaultSorter by="name">Name</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Email Address 1</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Email Address 2</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Phone Number 1</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Phone Number 2</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Address</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Birthday</mfDefaultSorter></th>
     </tr>
     </thead>
     <tbody>
     <tr  *ngFor="let item of agentOwnerData">
       <td> {{item.agentOwnerBody.firstName}} {{item.agentOwnerBody.lastName}} </td>
-      <td> {{item.agentOwnerBody.email}} </td>
-      <td> {{item.agentOwnerBody.address}} </td>
+      <td *ngFor="let e of item.agentOwnerBody.email"> {{e.value}} </td>
+      <td *ngFor="let p of item.agentOwnerBody.phone"> {{p.value}} </td>
+      <td *ngFor="let a of item.agentOwnerBody.address"> {{a.streetAndNr}} {{a.postalCode}} {{a.city}} {{a.country}}</td>
       <td> {{item.agentOwnerBody.birthday}} </td>
     </tr>
     </tbody>
   </table>
 </div>
 
+
 <br><br><br><br>
 
 <h4 class="users-content">Agents
-  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgents()">Search new for Agents</button>
+  <button type="button" class="btn btn-primary btn-raised users-content users-btn" (click)="getAgents()">Update Agents</button>
 </h4>
 <i class="users-content">Look through current agents.</i>
 <br><br>
-<div class="vertical-scroll users-content">
+<div class="users-content users-filter">
+  <div colspan="5">
+    <input class="form-control" placeholder="filter by owner" [(ngModel)]="filterQuery" />
+  </div>
+</div>
+<div class="vertical-scroll users-content table-scale">
   <table class="table table-striped users-table">
     <thead>
     <tr>
@@ -42,6 +141,7 @@
       <th>Owner</th>
       <th>Type</th>
       <th>Name</th>
+      <th>Comment</th>
     </tr>
     </thead>
     <tbody>
@@ -50,6 +150,7 @@
       <td> {{item.agentBody.owner}} </td>
       <td> {{item.agentBody.type}} </td>
       <td> {{item.agentBody.name}} </td>
+      <td> {{item.agentBody.comment}} </td>
     </tr>
     </tbody>
   </table>
