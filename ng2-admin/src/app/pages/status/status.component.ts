@@ -38,7 +38,7 @@ export class StatusComponent implements AfterViewInit {
     this.getInfoData();
     this.getGenesisBlock();
   }
-  
+
 
   showAO(){
     let div = document.getElementById("agent-owner");

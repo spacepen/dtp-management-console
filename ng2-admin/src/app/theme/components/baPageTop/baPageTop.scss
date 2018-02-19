@@ -50,40 +50,6 @@
     margin-top: 10px;
   }
 
-/*  .al-user-profile {
-    float: right;
-    margin-right: 12px;
-    transition: all .15s ease-in-out;
-    padding: 0;
-    width: 36px;
-    height: 36px;
-    border: 0;
-    opacity: 1;
-    position: relative;
-    ul.profile-dropdown:after {
-      bottom: 100%;
-      right: 0;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-color: rgba(255, 255, 255, 0);
-      border-bottom-color: #fff;
-      border-width: 10px;
-      margin-right: 28px;
-    }
-    a {
-      display: block;
-    }
-    img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-    }
-  }*/
-
   a.refresh-data {
     color: $sidebar-text;
     font-size: 13px;
@@ -212,28 +178,16 @@
     border: 0;
     opacity: 1;
     position: relative;
-    ul.profile-dropdown:after {
-      bottom: 100%;
-      right: 0;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-color: rgba(255, 255, 255, 0);
-      border-bottom-color: #fff;
-      border-width: 10px;
-      margin-right: 28px;
-      &:hover{
-        color: $primary;
-      }
-    }
     a {
       display: block;
-      &:hover {
-        color: $primary;
-      }
+    }
+  }
+
+  a.profile-toggle-link{
+
+    &:hover{
+      text-decoration: none;
+      color: $danger;
     }
   }
 }
