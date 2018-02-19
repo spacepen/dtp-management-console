@@ -9,13 +9,6 @@ import 'rxjs/add/operator/map';
 export class StatusService{
   constructor(private _http: Http){}
 
-  /*postTest(){
-    var json = JSON.stringify({var1: 'test', var2: 3});
-    var params = 'json= ' + json;
-
-    return this._http.post('http://localhost:8080/dtp/mc/login', params, {}).map(res => res.json());
-  }*/
-
   getInfo(){
     return this._http.get('http://localhost:8080/dtp/storage/info').map(res => res.json());
     // For now every different user has to change the ip to his own, so not dynamically :/

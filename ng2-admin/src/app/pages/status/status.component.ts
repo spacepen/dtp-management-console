@@ -13,7 +13,6 @@ import { StatusService } from './status.service';
 })
 export class StatusComponent implements AfterViewInit {
 
-  postData: string;
   getData: string;
   info: any;
   infoArray = [];
@@ -39,7 +38,7 @@ export class StatusComponent implements AfterViewInit {
     this.getGenesisBlock();
   }
 
-
+  //Show Initializer-Agent Owner
   showAO(){
     let div = document.getElementById("agent-owner");
     let button = document.getElementById("agentOButton");
@@ -52,6 +51,7 @@ export class StatusComponent implements AfterViewInit {
     }
   }
 
+  //Blockchain Description
   getBlockchainData(){
     this._httpService.getMetadata()
       .subscribe(
@@ -63,6 +63,7 @@ export class StatusComponent implements AfterViewInit {
       )
   }
 
+  //Genesis Block
   getGenesisBlock(){
     this._httpService.getMetadata()
       .subscribe(
@@ -78,6 +79,7 @@ export class StatusComponent implements AfterViewInit {
       )
   }
 
+  //Blockchain Status
   getInfoData(){
     this._httpService.getInfo()
       .subscribe(
@@ -89,6 +91,7 @@ export class StatusComponent implements AfterViewInit {
       )
   }
 
+  //DTP Instance
   onTestGet1(){
     this._httpService.getMetadata()
       .subscribe(
