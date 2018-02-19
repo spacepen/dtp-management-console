@@ -9,7 +9,7 @@ import { LayerConfigsService } from "./layerconfigs.service";
 
 })
 
-export class LayerConfigsComponent implements AfterViewInit {
+export class LayerConfigsComponent {
 
   constructor(
     private _httpService:LayerConfigsService

@@ -1,4 +1,4 @@
-<br><br>
+<br>
 
 <!--<button class="bc-content"(click)="getBcDataTest()">Test Filtered GET Request</button><<br>-->
 <!--<p class="bc-content">Outlet: {{bcAll}}</p>-->
@@ -26,20 +26,20 @@
           <th>Timestamp</th>
           <th>Creator Agent</th>
           <th>Transactions</th>
-          <th>Votes</th>
+          <!--<th>Votes</th>-->
           <th>Comment</th>
         </tr>
         </thead>
-        <!--<tbody>-->
-        <!--<tr  *ngFor="let item of chainBlockData">-->
-        <!--<td> {{item.id}} </td>-->
-        <!--<td> {{item.blockBody.timestamp}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>-->
-        <!--&lt;!&ndash;<td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>&ndash;&gt;-->
-        <!--&lt;!&ndash;<td> {{item.votes}} </td>&ndash;&gt;-->
-        <!--&lt;!&ndash;<td> {{item.blockBody.comment}} </td>&ndash;&gt;-->
-        <!--</tr>-->
-        <!--</tbody>-->
+        <tbody>
+        <tr  *ngFor="let item of poolTransactionData">
+        <td> {{item.id}} </td>
+        <td> {{item.blockBody.timestamp}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>
+        <!--<td> {{item.votes}} </td>-->
+        <td> {{item.blockBody.comment}} </td>
+        </tr>
+        </tbody>
       </table>
     </div>
     <br>
@@ -56,22 +56,24 @@
           <th>Timestamp</th>
           <th>Creator Pub Key</th>
           <th>Payload ID</th>
+          <th>Payload Type</th>
           <th>Operation</th>
           <th>cOwner</th>
           <th>Comment</th>
         </tr>
         </thead>
-        <!--<tbody>-->
-        <!--<tr  *ngFor="let item of chainBlockData">-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
+        <tbody>
+        <tr  *ngFor="let item of poolTransactionData">
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payloadType}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>
+        </tr>
+        </tbody>
       </table>
     </div>
   </div>
@@ -91,7 +93,7 @@
     </h4>
     <i class="bc-content">Look through current queue block data.</i>
     <br><br><br>
-    <div class="bc-content users-filter">
+    <div class="bc-content bc-filter">
       <div colspan="5">
         <input class="form-control" placeholder="filter by name"/>
       </div>
@@ -104,24 +106,24 @@
           <th>Timestamp</th>
           <th>Creator Agent</th>
           <th>Transactions</th>
-          <th>Votes</th>
+          <!--<th>Votes</th>-->
           <th>Comment</th>
         </tr>
         </thead>
-        <!--<tbody>-->
-        <!--<tr  *ngFor="let item of chainBlockData">-->
-        <!--<td> {{item.id}} </td>-->
-        <!--<td> {{item.blockBody.timestamp}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>-->
-        <!--&lt;!&ndash;<td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>&ndash;&gt;-->
-        <!--&lt;!&ndash;<td> {{item.votes}} </td>&ndash;&gt;-->
-        <!--&lt;!&ndash;<td> {{item.blockBody.comment}} </td>&ndash;&gt;-->
-        <!--</tr>-->
-        <!--</tbody>-->
+        <tbody>
+        <tr  *ngFor="let item of queueBlockData">
+        <td> {{item.id}} </td>
+        <td> {{item.blockBody.timestamp}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>
+        <!--<td> {{item.votes}} </td>-->
+        <td> {{item.blockBody.comment}} </td>
+        </tr>
+        </tbody>
       </table>
     </div>
     <br>
-    <div class="bc-content users-filter">
+    <div class="bc-content bc-filter">
       <div colspan="5">
         <input class="form-control" placeholder="filter by name"/>
       </div>
@@ -134,22 +136,24 @@
           <th>Timestamp</th>
           <th>Creator Pub Key</th>
           <th>Payload ID</th>
+          <th>Payload Type</th>
           <th>Operation</th>
           <th>cOwner</th>
           <th>Comment</th>
         </tr>
         </thead>
-        <!--<tbody>-->
-        <!--<tr  *ngFor="let item of chainBlockData">-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
+        <tbody>
+        <tr  *ngFor="let item of queueBlockData">
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payloadType}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>
+        </tr>
+        </tbody>
       </table>
     </div>
   </div>
@@ -169,7 +173,7 @@
     </h4>
     <i class="bc-content">Look through current chain block data.</i>
     <br><br><br>
-    <div class="bc-content users-filter">
+    <div class="bc-content bc-filter">
       <div colspan="5">
         <input class="form-control" placeholder="filter by name"/>
       </div>
@@ -182,24 +186,24 @@
           <th>Timestamp</th>
           <th>Creator Agent</th>
           <th>Transactions</th>
-          <th>Votes</th>
+          <!--<th>Votes</th>-->
           <th>Comment</th>
         </tr>
         </thead>
-        <!--<tbody>-->
-        <!--<tr  *ngFor="let item of chainBlockData">-->
-          <!--<td> {{item.id}} </td>-->
-          <!--<td> {{item.blockBody.timestamp}} </td>-->
-          <!--<td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>-->
-          <!--&lt;!&ndash;<td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>&ndash;&gt;-->
-          <!--&lt;!&ndash;<td> {{item.votes}} </td>&ndash;&gt;-->
-          <!--&lt;!&ndash;<td> {{item.blockBody.comment}} </td>&ndash;&gt;-->
-        <!--</tr>-->
-        <!--</tbody>-->
+        <tbody>
+        <tr  *ngFor="let item of chainBlockData">
+          <td> {{item.id}} </td>
+          <td> {{item.blockBody.timestamp}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.platformInitializerAO.agentOwnerBody.firstName}} {{t.payload.payload.platformInitializerAO.agentOwnerBody.lastName}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>
+          <!--<td> {{item.votes}} </td>-->
+          <td> {{item.blockBody.comment}} </td>
+        </tr>
+        </tbody>
       </table>
     </div>
     <br>
-    <div class="bc-content users-filter">
+    <div class="bc-content bc-filter">
       <div colspan="5">
         <input class="form-control" placeholder="filter by name"/>
       </div>
@@ -212,22 +216,24 @@
           <th>Timestamp</th>
           <th>Creator Pub Key</th>
           <th>Payload ID</th>
+          <th>Payload Type</th>
           <th>Operation</th>
           <th>cOwner</th>
           <th>Comment</th>
         </tr>
         </thead>
-        <!--<tbody>-->
-        <!--<tr  *ngFor="let item of chainBlockData">-->
-          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>-->
-          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>-->
-          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>-->
-          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>-->
-          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>-->
-          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>-->
-          <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
+        <tbody>
+        <tr  *ngFor="let item of chainBlockData">
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payloadType}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>
+        </tr>
+        </tbody>
       </table>
     </div>
   </div>
@@ -247,7 +253,7 @@
     </h4>
     <i class="bc-content">Look through current IBD block data.</i>
     <br><br><br>
-    <div class="bc-content users-filter">
+    <div class="bc-content bc-filter">
       <div colspan="5">
         <input class="form-control" placeholder="filter by name"/>
       </div>
@@ -260,24 +266,24 @@
           <th>Timestamp</th>
           <th>Creator Agent</th>
           <th>Transactions</th>
-          <th>Votes</th>
+          <!--<th>Votes</th>-->
           <th>Comment</th>
         </tr>
         </thead>
-        <!--<tbody>-->
-        <!--<tr  *ngFor="let item of chainBlockData">-->
-        <!--<td> {{item.id}} </td>-->
-        <!--<td> {{item.blockBody.timestamp}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>-->
-        <!--&lt;!&ndash;<td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>&ndash;&gt;-->
-        <!--&lt;!&ndash;<td> {{item.votes}} </td>&ndash;&gt;-->
-        <!--&lt;!&ndash;<td> {{item.blockBody.comment}} </td>&ndash;&gt;-->
-        <!--</tr>-->
-        <!--</tbody>-->
+        <tbody>
+        <tr  *ngFor="let item of ibdBlockData">
+        <td> {{item.id}} </td>
+        <td> {{item.blockBody.timestamp}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{t.payload.payload.agentOwnerBody.firstName}} {{item.blockBody.transactions.payload.payload.agentOwnerBody.firstName}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.tIndex.length-1}} </td>
+        <!--<td> {{item.votes}} </td>-->
+        <td> {{item.blockBody.comment}} </td>
+        </tr>
+        </tbody>
       </table>
     </div>
     <br>
-    <div class="bc-content users-filter">
+    <div class="bc-content bc-filter">
       <div colspan="5">
         <input class="form-control" placeholder="filter by name"/>
       </div>
@@ -290,22 +296,24 @@
           <th>Timestamp</th>
           <th>Creator Pub Key</th>
           <th>Payload ID</th>
+          <th>Payload Type</th>
           <th>Operation</th>
           <th>cOwner</th>
           <th>Comment</th>
         </tr>
         </thead>
-        <!--<tbody>-->
-        <!--<tr  *ngFor="let item of chainBlockData">-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>-->
-        <!--<td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
+        <tbody>
+        <tr  *ngFor="let item of ibdBlockData">
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.id}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.timestamp}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.creatorPubKey}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payload.id}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.payload.payloadType}} </td>
+          <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.operation}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.cOwner}} </td>
+        <td *ngFor="let t of item.blockBody.transactions"> {{item.stransactionBody.comment}} </td>
+        </tr>
+        </tbody>
       </table>
     </div>
   </div>

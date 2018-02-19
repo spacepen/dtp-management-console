@@ -24,7 +24,10 @@ export class BcRawDataComponent {
   ibdBlockData = [];
 
   ngAfterViewInit(){
-    this.getChainBlocks()
+    this.getPoolTransactions();
+    this.getChainBlocks();
+    this.getQueueBlocks();
+    this.getIbdBlocks();
   }
 
   // getting all data from json file /mc/adminarea/bcraw

@@ -82,7 +82,7 @@
 <!--</div>-->
 
 
-<br><br><br>
+<br>
 
 
 <h4 class="users-content">Agent Owner
@@ -96,14 +96,14 @@
   </div>
 </div>
 <div class="vertical-scroll users-content table-scale">
-  <table class="table table-striped users-table" [mfData]="agentOwnerData | usersFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage">
+  <table class="table table-striped users-table" [mfData]="agentOwnerData | usersFilter : filterQuery" #mf="mfDataTable">
     <thead>
     <tr>
       <th><mfDefaultSorter by="name">Name</mfDefaultSorter></th>
-      <th><mfDefaultSorter by="name">Email Address 1</mfDefaultSorter></th>
-      <th><mfDefaultSorter by="name">Email Address 2</mfDefaultSorter></th>
-      <th><mfDefaultSorter by="name">Phone Number 1</mfDefaultSorter></th>
-      <th><mfDefaultSorter by="name">Phone Number 2</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Work Email</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Personal Email</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Cell Phone</mfDefaultSorter></th>
+      <th><mfDefaultSorter by="name">Landline</mfDefaultSorter></th>
       <th><mfDefaultSorter by="name">Address</mfDefaultSorter></th>
       <th><mfDefaultSorter by="name">Birthday</mfDefaultSorter></th>
     </tr>
@@ -134,7 +134,7 @@
   </div>
 </div>
 <div class="vertical-scroll users-content table-scale">
-  <table class="table table-striped users-table">
+  <table class="table table-striped users-table" [mfData]="agentData | usersFilter : filterQuery" #mf="mfDataTable">
     <thead>
     <tr>
       <th>Version</th>

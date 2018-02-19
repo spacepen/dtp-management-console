@@ -13,6 +13,17 @@
 .table-scale{
   height: 100%;
   overflow: auto;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: thin;
+  border-color: #a3a3a3;
+}
+.bc-filter{
+  border-radius: 7.5px;
+  background-color: #e7e7e7;
+  border-style: solid;
+  border-width: thin;
+  border-color: #c7c7c7;
 }
 .bc-box{
   position: relative;
